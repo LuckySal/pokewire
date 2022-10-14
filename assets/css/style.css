@@ -1,0 +1,16 @@
+
+.navbar {
+    border-bottom: 2px black solid;
+    margin-left: 5px;
+}
+
+#main-title {
+    display: flex;
+    align-items: center;
+    font-size: xx-large;
+    
+}
+
+#logo {
+    margin-right: 10px;
+}

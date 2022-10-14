@@ -48,3 +48,13 @@ main {
     margin-bottom: 20px;
 }
 
+aside {
+    float: left;
+}
+
+.pkmn-avatar {
+    position: relative;
+    left: 35px;
+    margin-top: 20px;
+
+}

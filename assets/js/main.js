@@ -24,9 +24,6 @@ function handleSearch(event) {
         }
     })
     .then(data => {
-        // results will be in data.results[i].platforms
-        // i.e. this console log returns the first pokemon game and its platforms
-        // will want to make this work with the other api, meaning that when a user searches for a pokemon, 
         console.log(data);
     })
         .catch(error => {

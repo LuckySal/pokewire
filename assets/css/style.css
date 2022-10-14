@@ -35,4 +35,16 @@ main {
     border-right: 8px solid;
     left: -6px;
     top: 3px
-} 
+   } 
+
+#card-container { 
+    width: 800px; 
+}
+
+#game-container {
+    width: 800px;
+    position: relative;
+    left: 260px;
+    margin-bottom: 20px;
+}
+

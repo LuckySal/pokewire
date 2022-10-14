@@ -1,44 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>PokéWire</title>
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-            integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="./assets/css/style.css" />
-    </head>
-    <body>
-        <header class="has-background-info has-text-centered">
-            <h1 class="title is-1 has-text-white">
-                <iconify-icon inline icon="mdi:pokeball"></iconify-icon
-                >Poké<span class="has-text-danger">Wire</span>
-            </h1>
-        </header>
-        <main class="container is-flex is-justify-content-center is-align-items-center">
-          <section class="has-text-centered">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PokéWire</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+    <header class="has-background-info has-text-centered">
+        <h1 class="title is-1 has-text-white">
+            <iconify-icon inline icon="mdi:pokeball"></iconify-icon>Poké<span class="has-text-danger">Wire</span>
+        </h1>
+    </header>
+    <main class="container is-flex is-justify-content-center is-align-items-center">
+        <section class="has-text-centered">
             <div class="card custom-card has-background-link py-3 px-6">
                 <div class="media-content mb-4 mt-6">
-                    <p class="title is-4 has-text-warning">Search here for your favorite Poké<span class="has-text-danger">mon</span>!</p>
+                    <p class="title is-4 has-text-warning">Search here for your favorite Poké<span
+                            class="has-text-danger">mon</span>!</p>
                 </div>
-                <input type="text" id="pokemon-search-field" class="input is-danger mb-4 has-text-centered" placeholder="Pikachu">
-                <button id="submit-button" class="button is-warning has-text-link mb-6">Submit</button>
+                <div id="form" class="field">
+                    <input type="text" id="pokemon-search-field" class="input is-danger mb-4 has-text-centered"
+                        placeholder="Pikachu">
+                    <button id="submit-button" type="submit"
+                        class="button is-warning has-text-link mb-6">Submit</button>
+                </div>
             </div>
         </section>
     </main>
-        <script
-            src="https://code.jquery.com/jquery-3.6.1.min.js"
-            integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
-            crossorigin="anonymous"></script>
-        <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
-        <script src="./assets/js/main.js"></script>
-    </body>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+
 </html>

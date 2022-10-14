@@ -6,6 +6,7 @@ const Pokeurl = "https://pokeapi.co/api/v2/"
 const formEl = $("#form");
 
 
+
 function handleSearch(event) {
     event.preventDefault();
     let formInput = $(this).children("input");
@@ -28,8 +29,9 @@ function handleSearch(event) {
         // will want to make this work with the other api, meaning that when a user searches for a pokemon, 
         console.log(data);
     })
-    .catch(error => {
-        alert(error);
+        .catch(error => {
+        // TODO: replace alert with modal
+        alert(error.name + "\n" + error.message);
     })
 }
 

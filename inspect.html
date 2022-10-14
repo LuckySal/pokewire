@@ -1,30 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PokéWire - Inspect</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
 
-    <footer class="footer">
-        <div class="content has-text-centered">
-            <p>
-                <strong>Poké<span class="red">Wire</span></strong> is a free application hosted on <a href="https://github.com/LuckySal/pokewire"><i class="fa-brands fa-github"></i>GitHub.com</a>.
-            </p>
-            <p>
-                <a href="https://pokeapi.co">PokéAPI</a> data used for Pokémon information.
-            </p>
-            <p>
-                <a href="https://rawg.io">RAWG</a> data used for game information.
-            </p>
+    <!-- Pokemon Avatar Section -->
+    <div id="card-container" class="container is-fuild">
+        <div class="section">
+            <div class="card is-horizontal columns">
+                <div class="card-image column is-two-fifths">
+                    
+                    <figure class="image is-4by3">
+                        <div>
+                            POKEMON PICTURE GOES HERE
+                        </div>
+                    </figure>
+                </div>
+
+                <!-- Pokemon Information Section -->
+                <div class="card-content column is-three-fifths">
+                    <div class="media">
+                        <div>
+                            <p class="title is-4">POKEMON NAME</p>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        <p>No.: </p>
+                        <p>Type(s): </p>
+                        <p>Weakness: </p>
+                        <p>Strong Against: </p>
+
+                    </div>
+                </div>
+            </div>
         </div>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-    <script src="./assets/js/inspect.js"></script>
+      </div>
+       
+       <!-- Pokemon's Game and Location -->
+      <div id="game-container"> 
+      <div class="card is-fluid">
+        <div class="card-content">
+          <div class="content">
+            <p>Game: <a href="">Game Name</a></p>
+            <p>Locations: </p>
+              <ul>
+                LIST OF LOCATIONS
+              </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <footer class="footer">
+            <div class="content has-text-centered">
+                <p>
+                    <strong>Poké<span class="red">Wire</span></strong> is a free application hosted on <a
+                        href="https://github.com/LuckySal/pokewire"><i class="fa-brands fa-github"></i>GitHub.com</a>.
+                </p>
+                <p>
+                    <a href="https://pokeapi.co">PokéAPI</a> data used for Pokémon information.
+                </p>
+                <p>
+                    <a href="https://rawg.io">RAWG</a> data used for game information.
+                </p>
+            </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+            integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+        <script src="./assets/js/inspect.js"></script>
 </body>
+
 </html>

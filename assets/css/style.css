@@ -1,0 +1,10 @@
+main {
+    /* added so that input form will center using bulma classes */
+    height: 100vh;
+    display: flex;
+}
+.custom-card {
+    border-radius: 1rem;
+    /* change to color scheme variables and get rid of bulma css */
+    /* background-color: (color scheme variable) */
+}

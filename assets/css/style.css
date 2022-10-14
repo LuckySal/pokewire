@@ -1,3 +1,15 @@
+main {
+    /* added so that input form will center using bulma classes */
+    height: 100vh;
+    display: flex;
+}
+
+.custom-card {
+    border-radius: 1rem;
+    /* change to color scheme variables and get rid of bulma css */
+    /* background-color: (color scheme variable) */
+}
+
 .gg-pokemon {
     box-sizing: border-box;
     position: relative;
@@ -10,9 +22,9 @@
     0 0 0 2px,
     inset 0 0 0 2px;
     border-radius: 100%
-   }
+}
    
-   .gg-pokemon::before {
+.gg-pokemon::before {
     content: "";
     display: block;
     box-sizing: border-box;
@@ -23,4 +35,4 @@
     border-right: 8px solid;
     left: -6px;
     top: 3px
-   } 
+} 

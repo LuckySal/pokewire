@@ -1,3 +1,13 @@
+:root {
+    --yellow: #ffcb05;
+    --light-blue: #2a75bb;
+    --yellow-shadow: #c7a008;
+    --dark-blue: #3c5aa6;
+    --red: #FB1B1B;
+    --black: #000000;
+    --white: #FFFFFF;
+
+}
 main {
     /* added so that input form will center using bulma classes */
     height: 100vh;

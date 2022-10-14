@@ -1,22 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PokéWire - Results</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
-    </header>
-  
+
+    <main class="container mx-5">
+        <!-- WireDex Section -->
+        <aside class="columns is-half my-6">
+            <div class="card custom-card column has-background-link px-6">
+                <div class="card-content is-flex is-flex-direction-column">
+                    <h2 class="title is-2 has-text-warning">Wiré<span class="has-text-danger">Dex</span></h2>
+                    <div id="search-history" class="is-flex is-flex-direction-column">
+                        <!-- will want to change style display to none in html when beginning to work on logic for search history so that we can then display the button IF there is local storage-->
+                        <button type="submit" style="display: flex;"
+                            class="search-history-button button is-warning has-text-link mb-6">Pikachu</button>
+                        <button type="submit" style="display: flex;"
+                            class="search-history-button button is-warning has-text-link mb-6">Squirtle</button>
+                        <button type="submit" style="display: flex;"
+                            class="search-history-button button is-warning has-text-link mb-6">Charizard</button>
+                        <button type="submit" style="display: flex;"
+                            class="search-history-button button is-warning has-text-link mb-6">Ditto</button>
+                        <button type="submit" style="display: flex;"
+                            class="search-history-button button is-warning has-text-link mb-6">MewTwo</button>
+                            <button type="submit" style="display: flex;"
+                            class="search-history-button button is-warning has-text-link mb-6">Evie</button>
+                            <button type="submit" style="display: flex;"
+                            class="search-history-button button is-warning has-text-link mb-6">Golbat</button>
+                            <button type="submit" style="display: flex;"
+                            class="search-history-button button is-warning has-text-link mb-6">Pidgey</button>
+                            <button type="submit" style="display: flex;"
+                            class="search-history-button button is-warning has-text-link mb-6">Staryu</button>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+
 
     <footer class="footer">
         <div class="content has-text-centered">
             <p>
-                <strong>Poké<span class="red">Wire</span></strong> is a free application hosted on <a href="https://github.com/LuckySal/pokewire"><i class="fa-brands fa-github"></i>GitHub.com</a>.
+                <strong>Poké<span class="red">Wire</span></strong> is a free application hosted on <a
+                    href="https://github.com/LuckySal/pokewire"><i class="fa-brands fa-github"></i>GitHub.com</a>.
             </p>
             <p>
                 <a href="https://pokeapi.co">PokéAPI</a> data used for Pokémon information.
@@ -26,7 +62,9 @@
             </p>
         </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script src="./assets/js/results.js"></script>
 </body>
+
 </html>

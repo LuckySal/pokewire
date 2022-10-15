@@ -21,116 +21,106 @@
         </h1>
     </header>
 
-    <!-- WireDex Section -->
     <!-- (Kaileb) gave the entire 'main content' section a class of container and wrapped in main tag -->
     <main class="container mx-5 is-flex">
-    <aside class="columns my-6 is-flex-direction-column">
-        <div class="card custom-card column has-background-link px-6 mb-3">
-            <div class="card-content">
-                <h2 class="title is-2 has-text-white">
-                    <iconify-icon inline icon="mdi:pokeball"></iconify-icon>Wiré<span class="has-text-danger">Dex</span>
-                </h2>
-                <div id="search-history" class="is-flex is-flex-direction-column">
-                    <!-- will want to change style display to none in html when beginning to work on logic for search history so that we can then display the button IF there is local storage-->
-                    <button type="submit" style="display: flex;"
-                        class="search-history-button button is-warning has-text-link mb-6">Pikachu</button>
-                    <button type="submit" style="display: flex;"
-                        class="search-history-button button is-warning has-text-link mb-6">Squirtle</button>
-                    <button type="submit" style="display: flex;"
-                        class="search-history-button button is-warning has-text-link mb-6">Charizard</button>
-                    <button type="submit" style="display: flex;"
-                        class="search-history-button button is-warning has-text-link mb-3">Ditto</button>
-                </div>
-            </div>
-        </div>
-        <!-- GameDex -->
-        <div class="card custom-card column has-background-link px-6">
-            <div class="card-content">
-                <h2 class="title is-2 has-text-white">
-                    <iconify-icon inline icon="mdi:pokeball"></iconify-icon>Gamé<span class="has-text-danger">Dex</span>
-                </h2>
-                <div id="game-history" class="is-flex is-flex-direction-column">
-                    <!-- will want to change style display to none in html when beginning to work on logic for search history so that we can then display the button IF there is local storage-->
-                    <button type="submit" style="display: flex;"
-                        class="game-history-button button is-warning has-text-link mb-6">Pokémon: Red</button>
-                    <button type="submit" style="display: flex;"
-                        class="game-history-button button is-warning has-text-link mb-6">Pokémon: Sword</button>
-                    <button type="submit" style="display: flex;"
-                        class="game-history-button button is-warning has-text-link mb-6">Pokémon: GO!</button>
-                    <button type="submit" style="display: flex;"
-                        class="game-history-button button is-warning has-text-link mb-3">Pokémon: Brilliant Diamond</button>
-                </div>
-            </div>
-        </div>
-    </aside>
-
-    <!-- Pokemon Avatar Section -->
-    <!-- (Kaileb) removed div tag and refactor to semantic html - removed container class -->
-    <section id="card-container" class="">
-        <div class="section">
-            <div class="card is-horizontal columns">
-                <div class="card-image column is-two-fifths">
-                    
-                    <figure class="image is-4by3">
-                        <div>
-                            POKEMON PICTURE GOES HERE
-                        </div>
-                    </figure>
-                </div>
-
-                <!-- Pokemon Information Section -->
-                <div class="card-content column is-three-fifths">
-                    <div class="media">
-                        <div>
-                            <p class="title is-4">POKEMON NAME</p>
-                        </div>
-                    </div>
-
-                    <div class="content">
-                        <p>No.: </p>
-                        <p>Type(s): </p>
-                        <p>Weakness: </p>
-                        <p>Strong Against: </p>
-
+        <!-- WireDex Section -->
+        <aside id="wireDex" class="columns my-6 is-flex-direction-column">
+            <div class="card custom-card column has-background-link px-6 mb-3">
+                <div class="card-content">
+                    <h2 class="title is-2 has-text-white">
+                        <iconify-icon inline icon="mdi:pokeball"></iconify-icon>Wiré<span
+                            class="has-text-danger">Dex</span>
+                    </h2>
+                    <div id="search-history" class="is-flex is-flex-direction-column">
+                        <!-- will want to change style display to none in html when beginning to work on logic for search history so that we can then display the button IF there is local storage-->
+                        <button type="submit" style="display: flex;"
+                            class="search-history-button button is-warning has-text-link mb-6">Pikachu</button>
+                        <button type="submit" style="display: flex;"
+                            class="search-history-button button is-warning has-text-link mb-6">Squirtle</button>
+                        <button type="submit" style="display: flex;"
+                            class="search-history-button button is-warning has-text-link mb-6">Charizard</button>
+                        <button type="submit" style="display: flex;"
+                            class="search-history-button button is-warning has-text-link mb-6">Ditto</button>
+                        <button type="submit" style="display: flex;"
+                            class="search-history-button button is-warning has-text-link mb-6">Pikachu</button>
+                        <button type="submit" style="display: flex;"
+                            class="search-history-button button is-warning has-text-link mb-6">Squirtle</button>
+                        <button type="submit" style="display: flex;"
+                            class="search-history-button button is-warning has-text-link mb-6">Charizard</button>
+                        <button type="submit" style="display: flex;"
+                            class="search-history-button button is-warning has-text-link mb-3">Ditto</button>
                     </div>
                 </div>
             </div>
-        </div>
-      </div>
-       
-       <!-- Pokemon's Game and Location -->
-      <div id="game-container"> 
-      <div class="card is-fluid">
-        <div class="card-content">
-          <div class="content">
-            <p>Game: <a href="">Game Name</a></p>
-            <p>Locations: </p>
-              <ul>
-                LIST OF LOCATIONS
-              </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-</main>
+        </aside>
+        <!-- Pokemon Avatar Section -->
+        <!-- (Kaileb) removed div tag and refactor to semantic html - removed container class -->
+        <section id="card-container" class="">
+            <div class="section">
+                <div class="card is-horizontal columns">
+                    <div class="card-image column is-two-fifths">
 
-        <footer class="footer">
-            <div class="content has-text-centered">
-                <p>
-                    <strong>Poké<span class="red">Wire</span></strong> is a free application hosted on <a
-                        href="https://github.com/LuckySal/pokewire"><i class="fa-brands fa-github"></i>GitHub.com</a>.
-                </p>
-                <p>
-                    <a href="https://pokeapi.co">PokéAPI</a> data used for Pokémon information.
-                </p>
-                <p>
-                    <a href="https://rawg.io">RAWG</a> data used for game information.
-                </p>
+                        <figure class="image is-4by3">
+                            <div>
+                                POKEMON PICTURE GOES HERE
+                            </div>
+                        </figure>
+                    </div>
+
+                    <!-- Pokemon Information Section -->
+                    <div class="card-content column is-three-fifths">
+                        <div class="media">
+                            <div>
+                                <p class="title is-4">POKEMON NAME</p>
+                            </div>
+                        </div>
+
+                        <div class="content">
+                            <p>No.: </p>
+                            <p>Type(s): </p>
+                            <p>Weakness: </p>
+                            <p>Strong Against: </p>
+
+                        </div>
+                    </div>
+                </div>
             </div>
-        </footer>
-        <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-        <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
-        <script src="./assets/js/inspect.js"></script>
+            </div>
+
+            <!-- Pokemon's Game and Location -->
+            <div id="game-container">
+                <div class="card is-fluid">
+                    <div class="card-content">
+                        <div class="content">
+                            <p>Game: <a href="">Game Name</a></p>
+                            <p>Locations: </p>
+                            <ul>
+                                LIST OF LOCATIONS
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                <strong>Poké<span class="red">Wire</span></strong> is a free application hosted on <a
+                    href="https://github.com/LuckySal/pokewire"><i class="fa-brands fa-github"></i>GitHub.com</a>.
+            </p>
+            <p>
+                <a href="https://pokeapi.co">PokéAPI</a> data used for Pokémon information.
+            </p>
+            <p>
+                <a href="https://rawg.io">RAWG</a> data used for game information.
+            </p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
+    <script src="./assets/js/inspect.js"></script>
 </body>
 
 </html>

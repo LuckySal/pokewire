@@ -23,10 +23,13 @@
 
     <main class="container mx-5">
         <!-- WireDex Section -->
-        <aside class="columns is-half my-6">
-            <div class="card custom-card column has-background-link px-6">
-                <div class="card-content is-flex is-flex-direction-column">
-                    <h2 class="title is-2 has-text-warning">Wiré<span class="has-text-danger">Dex</span></h2>
+        <aside id="wireDex" class="columns my-6 is-flex-direction-column">
+            <div class="card custom-card column has-background-link px-6 mb-3">
+                <div class="card-content">
+                    <h2 class="title is-2 has-text-white">
+                        <iconify-icon inline icon="mdi:pokeball"></iconify-icon>Wiré<span
+                            class="has-text-danger">Dex</span>
+                    </h2>
                     <div id="search-history" class="is-flex is-flex-direction-column">
                         <!-- will want to change style display to none in html when beginning to work on logic for search history so that we can then display the button IF there is local storage-->
                         <button type="submit" style="display: flex;"
@@ -36,17 +39,28 @@
                         <button type="submit" style="display: flex;"
                             class="search-history-button button is-warning has-text-link mb-6">Charizard</button>
                         <button type="submit" style="display: flex;"
-                            class="search-history-button button is-warning has-text-link mb-6">Ditto</button>
+                            class="search-history-button button is-warning has-text-link mb-3">Ditto</button>
+                    </div>
+                </div>
+            </div>
+            <!-- GameDex -->
+            <div class="card custom-card column has-background-link px-6">
+                <div class="card-content">
+                    <h2 class="title is-2 has-text-white">
+                        <iconify-icon inline icon="mdi:pokeball"></iconify-icon>Gamé<span
+                            class="has-text-danger">Dex</span>
+                    </h2>
+                    <div id="game-history" class="is-flex is-flex-direction-column">
+                        <!-- will want to change style display to none in html when beginning to work on logic for search history so that we can then display the button IF there is local storage-->
                         <button type="submit" style="display: flex;"
-                            class="search-history-button button is-warning has-text-link mb-6">MewTwo</button>
+                            class="game-history-button button is-warning has-text-link mb-6">Pokémon: Red</button>
                         <button type="submit" style="display: flex;"
-                            class="search-history-button button is-warning has-text-link mb-6">Evie</button>
+                            class="game-history-button button is-warning has-text-link mb-6">Pokémon: Sword</button>
                         <button type="submit" style="display: flex;"
-                            class="search-history-button button is-warning has-text-link mb-6">Golbat</button>
+                            class="game-history-button button is-warning has-text-link mb-6">Pokémon: GO!</button>
                         <button type="submit" style="display: flex;"
-                            class="search-history-button button is-warning has-text-link mb-6">Pidgey</button>
-                        <button type="submit" style="display: flex;"
-                            class="search-history-button button is-warning has-text-link mb-6">Staryu</button>
+                            class="game-history-button button is-warning has-text-link mb-3">Pokémon: Brilliant
+                            Diamond</button>
                     </div>
                 </div>
             </div>
@@ -97,7 +111,6 @@
         </section>
         
     </main>
-
 
     <footer class="footer">
         <div class="content has-text-centered">

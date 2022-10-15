@@ -1,7 +1,5 @@
 .custom-card {
     border-radius: 1rem;
-    /* change to color scheme variables and get rid of bulma css */
-    /* background-color: (color scheme variable) */
 }
 
 .gg-pokemon {
@@ -70,4 +68,8 @@
     width: 25rem;
     height: auto;
     text-align: center;
+}
+/* for index.html ONLY */
+#custom-body {
+    height: 110vh;
 }

@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<body>
+<body class="custom-body is-flex is-flex-direction-column">
     <!-- Navbar -->
     <header class="has-background-info has-text-centered">
         <h1 class="title is-1 has-text-white">
@@ -21,7 +21,7 @@
         </h1>
     </header>
 
-    <main class="container mx-5">
+    <main class="custom-container">
         <!-- WireDex Section -->
         <aside id="wireDex" class="columns my-6 is-flex-direction-column">
             <div class="card custom-card column has-background-link px-6 mb-3">
@@ -67,49 +67,43 @@
         </aside>
 
         <!-- Center Section -->
-        <section>
+        <section class="is-flex is-flex-direction-column">
 
             <!-- Pokemon Avatar -->
-            <div class="pkmn-avatar">
-                <figure class="image is-128x128">
-                    <img src="https://bulma.io/images/placeholders/128x128.png">
-                </figure>
+            <div id="pkmn-avatar-container" class="ml-6 my-6">
+                <img id="pkmn-avatar" src="assets/images/place-holder-pikachu.jpg">
             </div>
 
             <!-- Game Information Section (Needs to be next to WireDex) -->
-            <div id="card-container" class="container is-fuild">
-                <div class="section">
-                    <div class="card is-horizontal columns">
-                        <div class="card-image column is-two-fifths">
+            
+                <div id="specific-game" class="card mx-6 is-horizontal columns has-background-danger">
+                    <div class="card-image column is-two-fifths">
+                        <figure class="image is-4by3">
+                            <div>
+                                <img id="game-icon" src="assets/images/placeholder-gameboy.jpg">
+                            </div>
+                        </figure>
+                    </div>
 
-                            <figure class="image is-4by3">
-                                <div>
-                                    GAME COVER GOES HERE
-                                </div>
-                            </figure>
+                    <div class="card-content column">
+                        <div class="media">
+                            <div>
+                                <p class="title is-3 has-text-warning">GAME NAME</p>
+                            </div>
                         </div>
 
-                        <div class="card-content column is-three-fifths">
-                            <div class="media">
-                                <div>
-                                    <p class="title is-4">GAME NAME</p>
-                                </div>
-                            </div>
+                        <div class="content is-size-4 has-text-link">
+                            <p>Game Summary: <span class="has-text-warning">This is a cool game. This is a cool game. This is a cool game. This is a cool game. This is a cool game. This is a cool game.</span> </p>
+                            <p>Platform: </p>
+                            <p>Release Date: </p>
+                            <p>Developer: </p>
 
-                            <div class="content">
-                                <p>Game Summary </p>
-                                <p>Plataform: </p>
-                                <p>Release Date: </p>
-                                <p>Developer: </p>
-
-                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
+
 
         </section>
-        
+
     </main>
 
     <footer class="footer">

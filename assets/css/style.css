@@ -42,9 +42,21 @@
     margin-bottom: 20px;
 }
 
+
 /* This is applied to the entire aside section on both inspect and results.html */
 #wireDex {
     width: 25rem;
     height: auto;
     text-align: center;
+}
+
+aside {
+    float: left;
+}
+
+.pkmn-avatar {
+    position: relative;
+    left: 35px;
+    margin-top: 20px;
+
 }

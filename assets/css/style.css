@@ -69,7 +69,20 @@
     height: auto;
     text-align: center;
 }
+
 /* for index.html ONLY */
 #custom-body {
     height: 110vh;
+}
+=======
+
+aside {
+    float: left;
+}
+
+.pkmn-avatar {
+    position: relative;
+    left: 35px;
+    margin-top: 20px;
+
 }

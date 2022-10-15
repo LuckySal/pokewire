@@ -31,15 +31,38 @@
     top: 3px
    } 
 
-#card-container { 
-    width: 800px; 
+#main-container { 
+    width: 75rem; 
+    padding-left: 5rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 
 #game-container {
-    width: 800px;
-    position: relative;
-    left: 260px;
-    margin-bottom: 20px;
+    width: 100%;
+    border: 3px solid black;
+    box-shadow: 0 0 4px 4px black;
+    border-radius: 2rem;
+}
+
+#pokemon-information-container {
+    width: 100%;
+}
+
+#pokemon-information-card {
+    width: 100%;
+    border: 3px solid black;
+    box-shadow: 0 0 4px 4px black;
+    border-radius: 2rem;
+    background-color: blue;
+}
+
+#pokemon-image {
+    border: 3px solid red;
+    border-radius: 2rem;
+    box-shadow: 0 0 4px 4px black;
+    object-fit: cover;
 }
 
 /* This is applied to the entire aside section on both inspect and results.html */

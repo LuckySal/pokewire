@@ -55,27 +55,23 @@
         </aside>
         <!-- Pokemon Avatar Section -->
         <!-- (Kaileb) removed div tag and refactor to semantic html - removed container class -->
-        <section id="card-container" class="">
-            <div class="section">
-                <div class="card is-horizontal columns">
-                    <div class="card-image column is-two-fifths">
-
+        <section id="main-container" class="is-flex">
+            <div id="pokemon-information-container" class="section">
+                <div id="pokemon-information-card" class="card is-horizontal columns has-background-warning">
+                    <div class="card-image column">
                         <figure class="image is-4by3">
-                            <div>
-                                POKEMON PICTURE GOES HERE
-                            </div>
+                            <img id="pokemon-image" src="./assets/images/place-holder-pikachu.jpg" alt="placeholder image">
                         </figure>
                     </div>
-
                     <!-- Pokemon Information Section -->
                     <div class="card-content column is-three-fifths">
                         <div class="media">
                             <div>
-                                <p class="title is-4">POKEMON NAME</p>
+                                <p class="title is-4 has-text-danger">Pikachu</p>
                             </div>
                         </div>
 
-                        <div class="content">
+                        <div class="content has-text-link">
                             <p>No.: </p>
                             <p>Type(s): </p>
                             <p>Weakness: </p>
@@ -85,21 +81,18 @@
                     </div>
                 </div>
             </div>
-            </div>
+
 
             <!-- Pokemon's Game and Location -->
-            <div id="game-container">
-                <div class="card is-fluid">
-                    <div class="card-content">
-                        <div class="content">
-                            <p>Game: <a href="">Game Name</a></p>
-                            <p>Locations: </p>
-                            <ul>
-                                LIST OF LOCATIONS
-                            </ul>
-                        </div>
-                    </div>
+            <div id="game-container" class="card has-background-danger py-6 px-6">
+                <div class="card-content is-size-4 has-text-warning">
+                    <p>Game: <a href="">Game Name</a></p>
+                    <p>Locations: </p>
+                    <ul>
+                        LIST OF LOCATIONS
+                    </ul>
                 </div>
+            </div>
         </section>
     </main>
 

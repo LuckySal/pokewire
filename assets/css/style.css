@@ -108,6 +108,7 @@ aside {
     box-shadow: 0 0 4px 4px black;
     object-fit: cover;
 }
+
 /* note for results.html = currently body height is set to 120vh...when storefront is added, may need to change */
 
 /* placeholder image of gameboy - Photo by Bos Navarit: https://www.pexels.com/photo/close-up-of-a-gameboy-7578735/ */
@@ -119,9 +120,15 @@ aside {
     margin-top: 4.5%;
 }
 
-#store-front-card{
+#store-front-card {
     padding: 5%;
     border: 3px solid red;
     border-radius: 2rem;
     box-shadow: 0 0 4px 4px black;
+}
+
+.modal-border {
+    padding: 5%;
+    border: 3px solid blue;
+    border-radius: 2rem;
 }

@@ -5,7 +5,18 @@ const Pokeurl = "https://pokeapi.co/api/v2/"
 
 const formEl = $("#form");
 
-
+// re-usable functions to open/close modal && See error section for handleSearch to review how each of these are called.
+function openModal($el) {
+    $el.addClass('is-active');
+}
+function closeModal($el) {
+    $el.classList.remove('is-active');
+}
+function closeAllModals() {
+    (document.querySelectorAll('.modal') || []).forEach(($modal) => {
+        closeModal($modal);
+    });
+}
 
 function handleSearch(event) {
     event.preventDefault();
@@ -15,21 +26,42 @@ function handleSearch(event) {
         return;
     }
     fetch(Pokeurl + `pokemon/${formInput.val().trim().toLowerCase()}`)
-    .then(response => {
-        if (!response.ok) {
-            throw new Error(response.statusText)
-        }
-        else {
-            return response.json();
-        }
-    })
-    .then(data => {
-        console.log(data);
-    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(response.status)
+            }
+            else {
+                return response.json();
+            }
+        })
+        .then(data => {
+            console.log(data);
+        })
         .catch(error => {
-        // TODO: replace alert with modal
-        alert(error.name + "\n" + error.message);
-    })
+            // added modal for error msg
+            openModal($('#error-msg-modal'));
+            let errorContent = $('.error-content');
+            let errorMsg = `${error}`;
+            let errorNote = `NOTE: Please check the spelling of the pokemon that you are searching for`
+
+            errorContent[0].textContent = `${errorMsg}`;
+            errorContent[1].textContent = `${errorNote}`;
+
+            (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
+                const $target = $close.closest('.modal');
+
+                $close.addEventListener('click', () => {
+                    closeModal($target);
+                });
+            });
+            document.addEventListener('keydown', (event) => {
+                const e = event || window.event;
+
+                if (e.keyCode === 27) { // Escape key
+                    closeAllModals();
+                }
+            });
+        })
 }
 
 formEl.on("submit", handleSearch);

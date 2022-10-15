@@ -13,11 +13,11 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<body>
+<body class="inspect-background">
     <!-- Navbar -->
-    <header class="has-background-info has-text-centered">
-        <h1 class="title is-1 has-text-white">
-            <iconify-icon inline icon="mdi:pokeball"></iconify-icon>Poké<span class="has-text-danger">Wire</span>
+    <header class="pkmn-blue-background has-text-centered">
+        <h1 class="title is-1 pkmn-white-text">
+            <iconify-icon inline icon="mdi:pokeball"></iconify-icon>Poké<span class="pkmn-red-text">Wire</span>
         </h1>
     </header>
 
@@ -25,30 +25,30 @@
     <main class="container mx-5 is-flex">
         <!-- WireDex Section -->
         <aside id="wireDex" class="columns my-6 is-flex-direction-column">
-            <div class="card custom-card column has-background-link px-6 mb-3">
+            <div class="card custom-card column dark-blue-background px-6 mb-3">
                 <div class="card-content">
-                    <h2 class="title is-2 has-text-white">
+                    <h2 class="title is-2 pkmn-white-text">
                         <iconify-icon inline icon="mdi:pokeball"></iconify-icon>Wiré<span
-                            class="has-text-danger">Dex</span>
+                            class="pkmn-red-text">Dex</span>
                     </h2>
                     <div id="search-history" class="is-flex is-flex-direction-column">
                         <!-- will want to change style display to none in html when beginning to work on logic for search history so that we can then display the button IF there is local storage-->
                         <button type="submit" style="display: flex;"
-                            class="search-history-button button is-warning has-text-link mb-6">Pikachu</button>
+                            class="search-history-button button pkmn-yellow-background dark-blue-text mb-6">Pikachu</button>
                         <button type="submit" style="display: flex;"
-                            class="search-history-button button is-warning has-text-link mb-6">Squirtle</button>
+                            class="search-history-button button pkmn-yellow-background dark-blue-text mb-6">Squirtle</button>
                         <button type="submit" style="display: flex;"
-                            class="search-history-button button is-warning has-text-link mb-6">Charizard</button>
+                            class="search-history-button button pkmn-yellow-background dark-blue-text mb-6">Charizard</button>
                         <button type="submit" style="display: flex;"
-                            class="search-history-button button is-warning has-text-link mb-6">Ditto</button>
+                            class="search-history-button button pkmn-yellow-background dark-blue-text mb-6">Ditto</button>
                         <button type="submit" style="display: flex;"
-                            class="search-history-button button is-warning has-text-link mb-6">Pikachu</button>
+                            class="search-history-button button pkmn-yellow-background dark-blue-text mb-6">Pikachu</button>
                         <button type="submit" style="display: flex;"
-                            class="search-history-button button is-warning has-text-link mb-6">Squirtle</button>
+                            class="search-history-button button pkmn-yellow-background dark-blue-text mb-6">Squirtle</button>
                         <button type="submit" style="display: flex;"
-                            class="search-history-button button is-warning has-text-link mb-6">Charizard</button>
+                            class="search-history-button button pkmn-yellow-background dark-blue-text mb-6">Charizard</button>
                         <button type="submit" style="display: flex;"
-                            class="search-history-button button is-warning has-text-link mb-3">Ditto</button>
+                            class="search-history-button button pkmn-yellow-background dark-blue-text mb-3">Ditto</button>
                     </div>
                 </div>
             </div>
@@ -57,7 +57,7 @@
         <!-- (Kaileb) removed div tag and refactor to semantic html - removed container class -->
         <section id="main-container" class="is-flex">
             <div id="pokemon-information-container" class="section">
-                <div id="pokemon-information-card" class="card is-horizontal columns has-background-warning">
+                <div id="pokemon-information-card" class="card is-horizontal columns pkmn-yellow-background">
                     <div class="card-image column">
                         <figure class="image is-4by3">
                             <img id="pokemon-image" src="./assets/images/place-holder-pikachu.jpg" alt="placeholder image">
@@ -67,11 +67,11 @@
                     <div class="card-content column is-three-fifths">
                         <div class="media">
                             <div>
-                                <p class="title is-4 has-text-danger">Pikachu</p>
+                                <p class="title is-4 pkmn-red-text">Pikachu</p>
                             </div>
                         </div>
 
-                        <div class="content has-text-link">
+                        <div class="content dark-blue-text">
                             <p>No.: </p>
                             <p>Type(s): </p>
                             <p>Weakness: </p>
@@ -84,12 +84,13 @@
 
 
             <!-- Pokemon's Game and Location -->
-            <div id="game-container" class="card has-background-danger py-6 px-6">
-                <div class="card-content is-size-4 has-text-warning">
+            <div id="game-container" class="card pkmn-red-background py-6 px-6">
+                <div class="card-content is-size-4 pkmn-yellow-text">
                     <!-- (Kaileb) added (s) as this will be a list of games that this pokemon would be found in-->
-                    <p>Game(s): <a href="">Game Name(s)</a></p>
+                    <p>Game(s): <a href="" class="pkmn-blue-text">Game Name(s)</a></p>
+                    <!--(Kaileb) locations? I thought we were having to buy locations on the next page? Are we doing it twice? Added the CSS just in case we are keeping this-->
                     <p>Locations: </p>
-                    <ul>
+                    <ul class="pkmn-blue-text">
                         LIST OF LOCATIONS
                     </ul>
                 </div>
@@ -97,17 +98,17 @@
         </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer pkmn-blue-background">
         <div class="content has-text-centered">
-            <p>
-                <strong>Poké<span class="red">Wire</span></strong> is a free application hosted on <a
-                    href="https://github.com/LuckySal/pokewire"><i class="fa-brands fa-github"></i>GitHub.com</a>.
+            <p class="dark-yellow-text">
+                <strong class="pkmn-white-text">Poké<span class="pkmn-red-text">Wire</span></strong> is a free application hosted on <a class="pkmn-yellow-text"
+                    href="https://github.com/LuckySal/pokewire"><i class="fa-brands fa-github pkmn-yellow-text"></i> GitHub.com</a>.
             </p>
-            <p>
-                <a href="https://pokeapi.co">PokéAPI</a> data used for Pokémon information.
+            <p class="pkmn-white-text">
+                <a class="pkmn-yellow-text" href="https://pokeapi.co">PokéAPI</a> data used for Pokémon information.
             </p>
-            <p>
-                <a href="https://rawg.io">RAWG</a> data used for game information.
+            <p class="pkmn-white-text">
+                <a class="pkmn-yellow-text" href="https://rawg.io">RAWG</a> data used for game information.
             </p>
         </div>
     </footer>

@@ -13,39 +13,40 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
-<body id="custom-body" class="is-flex is-flex-direction-column">
-    <header class="has-background-info has-text-centered">
-        <h1 class="title is-1 has-text-white">
-            <iconify-icon inline icon="mdi:pokeball"></iconify-icon>Poké<span class="has-text-danger">Wire</span>
+<body id="custom-body" class="is-flex is-flex-direction-column home-page-background">
+    <header class="pkmn-blue-background has-text-centered">
+        <h1 class="title is-1 pkmn-white-text">
+            <iconify-icon inline icon="mdi:pokeball"></iconify-icon>Poké<span class="pkmn-red-text">Wire</span>
         </h1>
     </header>
+    <!-- background image -->
     <main class="container is-flex is-align-items-center">
         <section class="has-text-centered">
-            <div class="card custom-card has-background-link py-3 px-6">
+            <div class="card custom-card dark-blue-background search-card-border py-3 px-6">
                 <div class="media-content mb-4 mt-6">
-                    <p class="title is-4 has-text-warning">Search here for your favorite Poké<span
-                            class="has-text-danger">mon</span>!</p>
+                    <p class="title is-4 pkmn-yellow-text">Search here for your favorite Poké<span
+                            class="pkmn-red-text">mon</span>!</p>
                 </div>
                 <form id="form" class="field">
-                    <input type="text" id="pokemon-search-field" class="input is-danger mb-4 has-text-centered"
+                    <input type="text" id="pokemon-search-field" class="input mb-4 has-text-centered"
                         placeholder="Pikachu">
                     <button id="submit-button" type="submit"
-                        class="button is-warning has-text-link mb-6">Submit</button>
+                        class="button pkmn-yellow-background dark-blue-text mb-6">Submit</button>
                 </form>
             </div>
         </section>
     </main>
-    <footer class="footer">
+    <footer class="footer pkmn-blue-background">
         <div class="content has-text-centered">
-            <p>
-                <strong>Poké<span class="red">Wire</span></strong> is a free application hosted on <a
-                    href="https://github.com/LuckySal/pokewire"><i class="fa-brands fa-github"></i>GitHub.com</a>.
+            <p class="dark-yellow-text">
+                <strong class="pkmn-white-text">Poké<span class="pkmn-red-text">Wire</span></strong> is a free application hosted on <a class="pkmn-yellow-text"
+                    href="https://github.com/LuckySal/pokewire"><i class="fa-brands fa-github pkmn-yellow-text"></i> GitHub.com</a>.
             </p>
-            <p>
-                <a href="https://pokeapi.co">PokéAPI</a> data used for Pokémon information.
+            <p class="pkmn-white-text">
+                <a class="pkmn-yellow-text" href="https://pokeapi.co">PokéAPI</a> data used for Pokémon information.
             </p>
-            <p>
-                <a href="https://rawg.io">RAWG</a> data used for game information.
+            <p class="pkmn-white-text">
+                <a class="pkmn-yellow-text" href="https://rawg.io">RAWG</a> data used for game information.
             </p>
         </div>
     </footer>
@@ -54,9 +55,9 @@
     <div id="error-msg-modal" class="modal">
         <div class="modal-background"></div>
         <div class="modal-content">
-            <div class="modal-border box has-background-warning">
-                <p class="error-content has-text-danger has-text-centered is-size-4"></p>
-                <p class="error-content has-text-danger has-text-centered is-size-6"></p>
+            <div class="modal-border box pkmn-yellow-background">
+                <p class="error-content pkmn-red-text has-text-centered is-size-4"></p>
+                <p class="error-content pkmn-red-text has-text-centered is-size-6"></p>
 
             </div>
         </div>

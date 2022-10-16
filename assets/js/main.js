@@ -38,6 +38,7 @@ function handleSearch(event) {
             console.log(data);
             // set data to local storage to be used for only CURRENT searched for pokemon and game data|| will be used in inspect.js for inspect.html
             localStorage.setItem('currentPokemonData', JSON.stringify(data))
+            location.href = './inspect.html'
         })
         .catch(error => {
             // added modal for error msg

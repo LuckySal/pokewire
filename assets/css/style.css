@@ -245,3 +245,8 @@ aside {
 .transparent-background {
     background-color: transparent;
 }
+/* allows user to scroll instead of content overflowing the page */
+.dropdown-content {
+    max-height: 8em;
+    overflow: scroll;
+  }

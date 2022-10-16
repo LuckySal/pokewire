@@ -1,5 +1,3 @@
-// (kaileb) I am assuming that for locations we were meaning routes that this pokemon can be encountered on so that is what I am putting here.
-
 // El & ID list
 let gameListDropdownID = $('#game-list-dropdown')
 
@@ -7,12 +5,10 @@ let gameListDropdownID = $('#game-list-dropdown')
 let currentPokemonData = localStorage.getItem('currentPokemonData');
 currentPokemonData = JSON.parse(currentPokemonData);
 
-// create an arrow function to handle data for Game List | This is called just like a normal function would be
+// Get user's choice of pokemon and display games that pokemon is found in
 const handleGameList = () => {
-    console.log(currentPokemonData.game_indices[0].version.name);
-    // change html for dropdown and for find out what games "this pokemon" appears in to match name of searched for pokemon
+    console.log(currentPokemonData);
 
-    // for each create a button with game name using jquery
         $(currentPokemonData.game_indices).each(function(i){
             let button = $('<button></button>').text(`${currentPokemonData.game_indices[i].version.name.toUpperCase()}`)
 

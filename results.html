@@ -13,53 +13,53 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<body class="custom-body is-flex is-flex-direction-column">
+<body class="custom-body is-flex is-flex-direction-column results-background">
     <!-- Navbar -->
-    <header class="has-background-info has-text-centered">
-        <h1 class="title is-1 has-text-white">
-            <iconify-icon inline icon="mdi:pokeball"></iconify-icon>Poké<span class="has-text-danger">Wire</span>
+    <header class="pkmn-blue-background has-text-centered">
+        <h1 class="title is-1 pkmn-white-text">
+            <iconify-icon inline icon="mdi:pokeball"></iconify-icon>Poké<span class="pkmn-red-text">Wire</span>
         </h1>
     </header>
 
     <main class="custom-container">
         <!-- WireDex Section -->
         <aside id="wireDex" class="columns my-6 is-flex-direction-column">
-            <div class="card custom-card column has-background-link px-6 mb-3">
+            <div class="card custom-card column dark-blue-background px-6 mb-3">
                 <div class="card-content">
-                    <h2 class="title is-2 has-text-white">
+                    <h2 class="title is-2 pkmn-white-text">
                         <iconify-icon inline icon="mdi:pokeball"></iconify-icon>Wiré<span
-                            class="has-text-danger">Dex</span>
+                            class="pkmn-red-text">Dex</span>
                     </h2>
                     <div id="search-history" class="is-flex is-flex-direction-column">
                         <!-- will want to change style display to none in html when beginning to work on logic for search history so that we can then display the button IF there is local storage-->
                         <button type="submit" style="display: flex;"
-                            class="search-history-button button is-warning has-text-link mb-6">Pikachu</button>
+                            class="search-history-button button pkmn-yellow-background dark-blue-text mb-6">Pikachu</button>
                         <button type="submit" style="display: flex;"
-                            class="search-history-button button is-warning has-text-link mb-6">Squirtle</button>
+                            class="search-history-button button pkmn-yellow-background dark-blue-text mb-6">Squirtle</button>
                         <button type="submit" style="display: flex;"
-                            class="search-history-button button is-warning has-text-link mb-6">Charizard</button>
+                            class="search-history-button button pkmn-yellow-background dark-blue-text mb-6">Charizard</button>
                         <button type="submit" style="display: flex;"
-                            class="search-history-button button is-warning has-text-link mb-3">Ditto</button>
+                            class="search-history-button button pkmn-yellow-background dark-blue-text mb-3">Ditto</button>
                     </div>
                 </div>
             </div>
             <!-- GameDex -->
-            <div class="card custom-card column has-background-link px-6">
+            <div class="card custom-card column dark-blue-background px-6">
                 <div class="card-content">
-                    <h2 class="title is-2 has-text-white">
+                    <h2 class="title is-2 pkmn-white-text">
                         <iconify-icon inline icon="mdi:pokeball"></iconify-icon>Gamé<span
-                            class="has-text-danger">Dex</span>
+                            class="pkmn-red-text">Dex</span>
                     </h2>
                     <div id="game-history" class="is-flex is-flex-direction-column">
                         <!-- will want to change style display to none in html when beginning to work on logic for search history so that we can then display the button IF there is local storage-->
                         <button type="submit" style="display: flex;"
-                            class="game-history-button button is-warning has-text-link mb-6">Pokémon: Red</button>
+                            class="game-history-button button pkmn-yellow-background dark-blue-text mb-6">Pokémon: Red</button>
                         <button type="submit" style="display: flex;"
-                            class="game-history-button button is-warning has-text-link mb-6">Pokémon: Sword</button>
+                            class="game-history-button button pkmn-yellow-background dark-blue-text mb-6">Pokémon: Sword</button>
                         <button type="submit" style="display: flex;"
-                            class="game-history-button button is-warning has-text-link mb-6">Pokémon: GO!</button>
+                            class="game-history-button button pkmn-yellow-background dark-blue-text mb-6">Pokémon: GO!</button>
                         <button type="submit" style="display: flex;"
-                            class="game-history-button button is-warning has-text-link mb-3">Pokémon: Brilliant
+                            class="game-history-button button pkmn-yellow-background dark-blue-text mb-3">Pokémon: Brilliant
                             Diamond</button>
                     </div>
                 </div>
@@ -76,7 +76,7 @@
 
             <!-- Game Information Section -->
 
-            <div id="specific-game" class="card mx-6 is-horizontal columns has-background-danger">
+            <div id="specific-game" class="card mx-6 is-horizontal columns pkmn-red-background">
                 <div class="card-image column is-two-fifths">
                     <figure class="image is-4by3">
                         <div>
@@ -88,12 +88,12 @@
                 <div class="card-content column">
                     <div class="media">
                         <div>
-                            <p class="title is-3 has-text-warning">GAME NAME</p>
+                            <p class="title is-3 pkmn-yellow-text">GAME NAME</p>
                         </div>
                     </div>
 
-                    <div class="content is-size-4 has-text-link">
-                        <p>Game Summary: <span class="has-text-warning">This is a cool game. This is a cool game. This
+                    <div class="content is-size-4 dark-blue-text">
+                        <p>Game Summary: <span class="pkmn-yellow-text">This is a cool game. This is a cool game. This
                                 is a cool game. This is a cool game. This is a cool game. This is a cool game.</span>
                         </p>
                         <p>Platform: </p>
@@ -105,9 +105,9 @@
             </div>
             <!-- Store Front Section (Will need to update #buy-this-game in .js with appropriate link whenever a certain game appears...)-->
             <div id="store-front-container">
-                <div id="store-front-card" class="has-background-warning">
-                    <div class="is-size-4 has-text-link">
-                        <p>Want to buy this game? Click<a id="buy-this-game" class="has-text-danger" href=""> HERE</a>
+                <div id="store-front-card" class="pkmn-yellow-background">
+                    <div class="is-size-4 pkmn-blue-text">
+                        <p>Want to buy this game? Click<a id="buy-this-game" class="pkmn-red-text" href=""> HERE</a>
                             to find out where you
                             can purchase it!</p>
                     </div>
@@ -117,17 +117,17 @@
         <!-- Pokemon's Game and Location -->
     </main>
 
-    <footer class="footer">
+    <footer class="footer pkmn-blue-background">
         <div class="content has-text-centered">
-            <p>
-                <strong>Poké<span class="red">Wire</span></strong> is a free application hosted on <a
-                    href="https://github.com/LuckySal/pokewire"><i class="fa-brands fa-github"></i>GitHub.com</a>.
+            <p class="dark-yellow-text">
+                <strong class="pkmn-white-text">Poké<span class="pkmn-red-text">Wire</span></strong> is a free application hosted on <a class="pkmn-yellow-text"
+                    href="https://github.com/LuckySal/pokewire"><i class="fa-brands fa-github pkmn-yellow-text"></i> GitHub.com</a>.
             </p>
-            <p>
-                <a href="https://pokeapi.co">PokéAPI</a> data used for Pokémon information.
+            <p class="pkmn-white-text">
+                <a class="pkmn-yellow-text" href="https://pokeapi.co">PokéAPI</a> data used for Pokémon information.
             </p>
-            <p>
-                <a href="https://rawg.io">RAWG</a> data used for game information.
+            <p class="pkmn-white-text">
+                <a class="pkmn-yellow-text" href="https://rawg.io">RAWG</a> data used for game information.
             </p>
         </div>
     </footer>

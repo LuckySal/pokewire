@@ -13,42 +13,55 @@
 .pkmn-yellow-background {
     background-color: var(--pkmn-yellow);
 }
+
 .pkmn-blue-background {
     background-color: var(--pkmn-blue);
 }
+
 .dark-yellow-background {
     background-color: var(--dark-yellow);
 }
+
 .dark-blue-background {
     background-color: var(--dark-blue)
 }
+
 .pkmn-red-background {
     background-color: var(--pkmn-red);
 }
+
 .pkmn-black-background {
     background-color: var(--pkmn-black);
 }
+
 .pkmn-white-background {
     background-color: var(--pkmn-white);
 }
+
 .pkmn-yellow-text {
     color: var(--pkmn-yellow);
 }
+
 .pkmn-blue-text {
     color: var(--pkmn-blue);
 }
+
 .dark-yellow-text {
     color: var(--dark-yellow);
 }
+
 .dark-blue-text {
     color: var(--dark-blue)
 }
+
 .pkmn-red-text {
     color: var(--pkmn-red);
 }
+
 .pkmn-black-text {
     color: var(--pkmn-black);
 }
+
 .pkmn-white-text {
     color: var(--pkmn-white);
 }
@@ -214,7 +227,26 @@ aside {
 }
 
 .inspect-background {
-/* Photo by Mike Esparza: https://www.pexels.com/photo/black-nintendo-game-boy-on-black-textile-3702458/ */
-    background-image: url('../images/inspectBackground.jpg'); 
+    /* Photo by Mike Esparza: https://www.pexels.com/photo/black-nintendo-game-boy-on-black-textile-3702458/ */
+    background-image: url('../images/inspectBackground.jpg');
     background-size: cover;
 }
+
+.dropdown-border {
+    border: 3px solid var(--pkmn-black);
+    border-radius: 1rem;
+}
+
+.alt-dropdown-border{
+    border: 10px solid var(--pkmn-blue);
+    border-radius: 1rem;
+}
+
+.transparent-background {
+    background-color: transparent;
+}
+/* allows user to scroll instead of content overflowing the page */
+.dropdown-content {
+    max-height: 8em;
+    overflow: scroll;
+  }

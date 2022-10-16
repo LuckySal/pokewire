@@ -11,16 +11,17 @@ currentPokemonData = JSON.parse(currentPokemonData);
 const handleGameList = () => {
     console.log(currentPokemonData.game_indices[0].version.name);
     // change html for dropdown and for find out what games "this pokemon" appears in to match name of searched for pokemon
+
+    // for each create a button with game name using jquery
         $(currentPokemonData.game_indices).each(function(i){
-            let button = document.createElement('button');
-            button.textContent =`${currentPokemonData.game_indices[i].version.name.toUpperCase()}`
-            button.classList.add('button', 'dropdown-item', 'dropdown-border', 'pkmn-yellow-background', 'pkmn-black-text', 'is-size-6', 'has-text-center')
-            gameListDropdownID[0].appendChild(button);
+            let button = $('<button></button>').text(`${currentPokemonData.game_indices[i].version.name.toUpperCase()}`)
+
+            button.addClass('button dropdown-item dropdown-border pkmn-yellow-background pkmn-black-text is-size-6 mb-2')
+
+            gameListDropdownID.append(button);
     });
 
 }
 
 
 handleGameList();
-
-let html = `<button class="button dropdown-item dropdown-border pkmn-yellow-background pkmn-black-text is-size-6">Pokemon Yellow</button>`

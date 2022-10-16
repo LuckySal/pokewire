@@ -7,9 +7,6 @@ let routeContentID = $('#route-content');
 let currentPokemonData = localStorage.getItem('currentPokemonData');
 currentPokemonData = JSON.parse(currentPokemonData);
 
-let currentPokemonEncounterData = localStorage.getItem('currentPokemonEncounterData');
-currentPokemonEncounterData = JSON.parse(currentPokemonEncounterData);
-
 // Get user's choice of pokemon and display games that pokemon is found in
 const handleGameList = () => {
     console.log(currentPokemonData);
@@ -36,18 +33,26 @@ const handleLocationsList = () => {
         })
         .then(encounterData => {
             console.log(encounterData);
-            // set to loc storage to be used in displayLocations
+            // set to loc storage for now - but will populate modal with live data
             localStorage.setItem('currentPokemonEncounterData', JSON.stringify(encounterData));
 
+            let versionDetails = []
+
+            for (var i = 0; i < encounterData.length; i++) {
+                let locationInfo = $('<h2></h2>').text(`Location: ${encounterData[i].location_area.name}`);
+                routeContentID.append(locationInfo);
+                
+                let gamesInfo = $('<p></p>').text(`Games:`);
+                locationInfo.append(gamesInfo);
+
+                versionDetails.push(encounterData[i].version_details)
+            }
+            // got through version details and get just the name and max chance for each corresponding name //
         })
         .catch(error => {
             // add error modal - should just copy what is already in main.js and index.html
             console.log(error);
         });
-}
-console.log(currentPokemonEncounterData);
-const displayLocationsList = () => {
-// need to work on getting currentPokemonEncounterData and placing it in modal
 }
 
 // call functions here:

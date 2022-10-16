@@ -87,7 +87,7 @@
             <!-- Pokemon's Game and Location -->
             <div id="game-container" class="card pkmn-red-background has-text-centered">
                 <div class="card-content is-size-4 pkmn-white-text">
-                    <!-- (Kaileb) added (s) as this will be a list of games that this pokemon would be found in-->
+                    <!-- Games-->
                     <p class="is-size-3">Find out what games this pokemon appears in:<div class="dropdown is-hoverable py-3">
                         <!-- Dropdown menu so that data isn't overflowing the page | made the dropdown 'is-hoverable'-->
                         <div class="dropdown-trigger">
@@ -104,11 +104,10 @@
                           </div>
                         </div>
                       </div></p>
-                    <!--(Kaileb) locations? I am assuming this means encounter locations since the store locations is on the next page | I'm thinking it may make more sense for this section to be on the results page-->
-                    <p class="is-size-3">Where can I encounter this pokemon? </p>
-                    <ul class="pkmn-blue-text is-size-5 py-3">
-                        LIST OF LOCATIONS
-                    </ul>
+                    <!--Locations (Assuming we meant routes since store location is on results.html already)-->
+                    <p class="is-size-3">Where can I encounter this pokemon?</p>
+                    <!-- trigger for modal -->
+                    <button class="js-modal-trigger button is-size-4 dropdown-border pkmn-blue-background mt-2" data-target="route-list-modal"><strong><span class="pkmn-white-text">Routé</span><span class="pkmn-red-text">List</span></strong></button>
                 </div>
             </div>
         </section>
@@ -129,6 +128,25 @@
             </p>
         </div>
     </footer>
+
+    <!-- Route/location list modal -->
+    <div id="route-list-modal" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+          <header class="modal-card-head">
+            <p class="modal-card-title">Modal title</p>
+            <button class="delete" aria-label="close"></button>
+          </header>
+          <section class="modal-card-body">
+            <!-- Content ... -->
+          </section>
+          <footer class="modal-card-foot">
+            <button class="button is-success">Save changes</button>
+            <button class="button">Cancel</button>
+          </footer>
+        </div>
+      </div>
+
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"
         integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>

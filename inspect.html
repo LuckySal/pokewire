@@ -91,18 +91,16 @@
                     <p class="is-size-3">Find out what games this pokemon appears in:<div class="dropdown is-hoverable py-3">
                         <!-- Dropdown menu so that data isn't overflowing the page | made the dropdown 'is-hoverable'-->
                         <div class="dropdown-trigger">
-                          <button class=" dropdown-border button pkmn-blue-background" aria-haspopup="true" aria-controls="dropdown-menu">
+                          <button class="dropdown-border button pkmn-blue-background" aria-haspopup="true" aria-controls="dropdown-menu">
                             <strong class="is-size-4"><span class="pkmn-white-text">Gamé</span><span class="pkmn-red-text">List</span></span></strong>
                             <span class="icon is-small pkmn-white-text">
                               <i class="fas fa-angle-down" aria-hidden="true"></i>
                             </span>
                           </button>
                         </div>
-                        <div class="dropdown-menu transparent-background" id="dropdown-menu" role="menu">
-                          <div class="dropdown-content transparent-background">
-                            <button class="button dropdown-item dropdown-border pkmn-yellow-background pkmn-black-text is-size-6">
-                              Pokemon Yellow
-                            </button>
+                        <div class="dropdown-menu transparent-background" role="menu">
+                          <div id="game-list-dropdown" class="dropdown-content transparent-background">
+                            <!-- dropdown buttons are dynamically created here in inspect.js -->
                           </div>
                         </div>
                       </div></p>

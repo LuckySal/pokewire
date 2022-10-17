@@ -4,23 +4,23 @@ gamesAPI = "https://api.rawg.io/api/games/" + gameName + "?key=986d608da5c140598
 
 
 
-fetch(gamesAPI, {
-    method: "GET",
-   
-  })
+fetch(gamesAPI)
     .then(function (response) {
       return response.json();
     })
     .then(function (response) {
         console.log(response);
         //description of game
-        $("#test").text(response.description_raw);
+        $("#summary").text("Summary: " + response.description_raw);
+        
+        //plataform
+        $("#platform").text("Plataform: " + response.platforms[0].platform.name);
 
-        //takes you game website
-        $("#website").attr("href", response.website).text("link to game website");
-        
-        //takes you to the game store website
-        $("#store").attr("href", "https://www." + response.stores[0].store.domain).text("link to store website");
-        
+        //developer
+        $("#developers").text("Developer: " + response.developers[0].name);
+
+        //released
+        $("#released-date").text("Released Date: " + response.released);
+    
       }
     );

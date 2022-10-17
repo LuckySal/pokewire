@@ -113,9 +113,14 @@ function handleInfoCard() {
 
 function handleWireDex() {
     if (!searchHistory.includes(currentPokemonData.name)) {
-        searchHistory.unshift(currentPokemonData.name);
-        localStorage.setItem('wireDexData', JSON.stringify(searchHistory));
+        searchHistory.unshift(currentPokemonData.name);    
     }
+
+    if (searchHistory.length > 8) {
+        searchHistory.pop();
+    }
+
+    localStorage.setItem('wireDexData', JSON.stringify(searchHistory));
 }
 
 function wireDexInit() {

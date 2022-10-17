@@ -154,6 +154,13 @@ function initHistory() {
     }
 }
 
+function handleHistoryClick(event) {
+    if ($(this).is(":button") && params.get("name") !== $(this).text().toLowerCase()) {
+        let newLoc = "./inspect.html?name=" + $(this).text().toLowerCase();
+        location.href = newLoc;
+    }
+}
+
 // event listener for route list modal
 document.addEventListener('DOMContentLoaded', () => {
     // Functions to open and close a modal
@@ -200,4 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+historyEl.on("click", "button", handleHistoryClick);
+
 wireDexInit();
+

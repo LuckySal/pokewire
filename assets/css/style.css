@@ -250,3 +250,22 @@ aside {
     max-height: 8em;
     overflow: scroll;
   }
+
+.route-list-border {
+    border: 10px solid var(--pkmn-black);
+    border-radius: 3rem;
+}
+
+/* for inspect.html */
+.modal-background {
+    background-color: var(--pkmn-red);
+    opacity: .5;
+}
+
+.route-list-border-bottom {
+    border-bottom: 10px solid var(--pkmn-black);
+}
+
+.route-list-border-top {
+    border-top: 10px solid var(--pkmn-black);
+}

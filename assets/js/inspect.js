@@ -3,7 +3,10 @@ let gameListDropdownID = $('#game-list-dropdown');
 let routeContentID = $('#route-content');
 
 const historyEl = $("#search-history");
-let history = localStorage.getItem("wireDexData");
+let history = JSON.parse(localStorage.getItem("wireDexData"));
+
+// declare array for wiredex search history
+let searchHistory = [];
 
 const imageEl = $("#pokemon-image");
 const nameEl = $("#pokemon-name");
@@ -17,7 +20,8 @@ const strongEl = $("#strong");
 const Pokeurl = "https://pokeapi.co/api/v2/";
 const params = new URLSearchParams(location.search);
 
-initHistory();
+
+
 
 var currentPokemonData;
 fetch(Pokeurl + "pokemon/" + params.get("name"), { cache: "force-cache", })
@@ -30,6 +34,7 @@ fetch(Pokeurl + "pokemon/" + params.get("name"), { cache: "force-cache", })
         handleLocationsList();
         handleInfoCard();
         handleWireDex();
+        initHistory();
     });
 
 // Get user's choice of pokemon and display games that pokemon is found in
@@ -105,15 +110,13 @@ function handleInfoCard() {
     typeEl.text(getTypes());
 }
 
-// declare array for wiredex search history
-let searchHistory = [];
 
-const handleWireDex = () => {
+function handleWireDex() {
    searchHistory.unshift(currentPokemonData.name);
    localStorage.setItem('wireDexData', JSON.stringify(searchHistory));
 }
 
-const wireDexInit = () => {
+function wireDexInit() {
     if (localStorage.getItem('wireDexData')) {
         searchHistory = JSON.parse(localStorage.getItem('wireDexData'));
 }
@@ -136,13 +139,15 @@ function getTypes() {
 // Initialize the search history
 function initHistory() {
     if (!history) return;
-    let btn = $("<button></button>")
-    btn.attr("type", "submit");
-    btn.attr("style", "display:flex");
-    btn.attr("class", "search-history-button button pkmn-yellow-background dark-blue-text mb-6");
+    console.log(history);
     for (let i = 0; i < history.length; i++) {
+        let btn = $("<button></button>")
+        btn.attr("type", "submit");
+        btn.attr("style", "display:flex");
+        btn.attr("class", "search-history-button button pkmn-yellow-background dark-blue-text mb-6");
+        console.log(history[i]);
         let element = history[i];
-        btn.text(element);
+        btn.text(capitalizeFirstLetter(element));
         historyEl.append(btn);
     }
 }

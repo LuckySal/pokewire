@@ -11,7 +11,7 @@ currentPokemonData = JSON.parse(currentPokemonData);
 const handleGameList = () => {
     console.log(currentPokemonData);
 
-    $(currentPokemonData.game_indices).each(function (i) {
+    $(currentPokemonData.game_indices).each(i => {
         let button = $('<button></button>').text(`${currentPokemonData.game_indices[i].version.name.toUpperCase()}`)
 
         button.addClass('button dropdown-item dropdown-border pkmn-yellow-background pkmn-black-text is-size-6 mb-2')
@@ -21,6 +21,7 @@ const handleGameList = () => {
 }
 
 const handleLocationsList = () => {
+    // takes the id value from the previous api pull and passes it into this for encounter details
     const encounters = `https://pokeapi.co/api/v2/pokemon/${currentPokemonData.id}/encounters`;
     fetch(encounters)
         .then(response => {
@@ -36,18 +37,35 @@ const handleLocationsList = () => {
             // set to loc storage for now - but will populate modal with live data
             localStorage.setItem('currentPokemonEncounterData', JSON.stringify(encounterData));
 
-            let versionDetails = []
+            // store version_details in empty array - all this has been tested and compared to encounterData.version_details to ensure data is populating correctly...
+            let versionData = [];
 
-            for (var i = 0; i < encounterData.length; i++) {
-                let locationInfo = $('<h2></h2>').text(`Location: ${encounterData[i].location_area.name}`);
-                routeContentID.append(locationInfo);
-                
-                let gamesInfo = $('<p></p>').text(`Games:`);
-                locationInfo.append(gamesInfo);
+            $(encounterData).each(i => {
 
-                versionDetails.push(encounterData[i].version_details)
-            }
-            // got through version details and get just the name and max chance for each corresponding name //
+                versionData.push(encounterData[i].version_details);
+
+                for (details in versionData[i]) {
+
+                    console.log(versionData[i][details].version.name);
+                    let games = versionData[i][details].version.name;
+                    let chance = versionData[i][details].max_chance;
+
+                    // can split('-') with a for loop and use substring to capitalize first letter of each word later on if we have time
+
+                    let locationInfo = $(`<h2 class="is-size-4 pkmn-blue-text"><strong class="pkmn-red-text">Location: </strong>${encounterData[i].location_area.name.toUpperCase()}</h2>`);
+                    routeContentID.append(locationInfo);
+
+                    let gamesInfo = $(`<p class="is-size-6"><strong class="pkmn-red-text">Game: </strong>Pokémon ${games.toUpperCase()}</p>`);
+                    locationInfo.append(gamesInfo);
+
+                    let chanceInfo = $(`<p class="is-size-6 mb-6"><strong class="pkmn-red-text">Max chance of encounter: </strong>${chance}%</p>`)
+                    gamesInfo.append(chanceInfo);
+
+                }
+            });
+
+            console.log(versionData);
+
         })
         .catch(error => {
             // add error modal - should just copy what is already in main.js and index.html

@@ -2,6 +2,9 @@
 let gameListDropdownID = $('#game-list-dropdown');
 let routeContentID = $('#route-content');
 
+const historyEl = $("#search-history");
+let history = localStorage.getItem("wireDexData");
+
 const imageEl = $("#pokemon-image");
 const nameEl = $("#pokemon-name");
 const numEl = $("#number");
@@ -13,6 +16,8 @@ const strongEl = $("#strong");
 // get currentPokemon data from loc storage (from main.js) and place in var
 const Pokeurl = "https://pokeapi.co/api/v2/";
 const params = new URLSearchParams(location.search);
+
+initHistory();
 
 var currentPokemonData;
 fetch(Pokeurl + "pokemon/" + params.get("name"), { cache: "force-cache", })
@@ -111,6 +116,20 @@ function getTypes() {
         types = types + " " + capitalizeFirstLetter(currentPokemonData.types[1].type.name);
     }
     return types;
+}
+
+// Initialize the search history
+function initHistory() {
+    if (!history) return;
+    let btn = $("<button></button>")
+    btn.attr("type", "submit");
+    btn.attr("style", "display:flex");
+    btn.attr("class", "search-history-button button pkmn-yellow-background dark-blue-text mb-6");
+    for (let i = 0; i < history.length; i++) {
+        let element = history[i];
+        btn.text(element);
+        historyEl.append(btn);
+    }
 }
 
 // event listener for route list modal

@@ -3,9 +3,19 @@ let gameListDropdownID = $('#game-list-dropdown');
 let routeContentID = $('#route-content');
 
 // get currentPokemon data from loc storage (from main.js) and place in var
+const Pokeurl = "https://pokeapi.co/api/v2/";
+const params = new URLSearchParams(location.search);
 
-let currentPokemonData = localStorage.getItem('currentPokemonData');
-currentPokemonData = JSON.parse(currentPokemonData);
+var currentPokemonData;
+fetch(Pokeurl + "pokemon/" + params.get("name"), { cache: "force-cache", })
+    .then(result => {
+        return result.json();
+    })
+    .then(data => {
+        currentPokemonData = data;
+        handleGameList();
+        handleLocationsList();
+    });
 
 // Get user's choice of pokemon and display games that pokemon is found in
 const handleGameList = () => {
@@ -22,7 +32,7 @@ const handleGameList = () => {
 
 const handleLocationsList = () => {
     // takes the id value from the previous api pull and passes it into this for encounter details
-    const encounters = `https://pokeapi.co/api/v2/pokemon/${currentPokemonData.id}/encounters`;
+    const encounters = `https://pokeapi.co/api/v2/pokemon/${params.get("name")}/encounters`;
     fetch(encounters)
         .then(response => {
             if (!response.ok) {
@@ -74,8 +84,7 @@ const handleLocationsList = () => {
 }
 
 // call functions here:
-handleGameList();
-handleLocationsList();
+
 
 // event listener for route list modal
 document.addEventListener('DOMContentLoaded', () => {

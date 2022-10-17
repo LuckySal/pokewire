@@ -25,7 +25,9 @@ function handleSearch(event) {
         console.log("Empty input")
         return;
     }
-    fetch(Pokeurl + `pokemon/${formInput.val().trim().toLowerCase()}`)
+    fetch(Pokeurl + `pokemon/${formInput.val().trim().toLowerCase()}`, {
+        cache: "reload",
+    })
         .then(response => {
             if (!response.ok) {
                 throw new Error(response.status)
@@ -36,9 +38,7 @@ function handleSearch(event) {
         })
         .then(data => {
             console.log(data);
-            // set data to local storage to be used for only CURRENT searched for pokemon and game data|| will be used in inspect.js for inspect.html
-            localStorage.setItem('currentPokemonData', JSON.stringify(data))
-            location.href = './inspect.html'
+            location.href = './inspect.html?name=' + formInput.val();
         })
         .catch(error => {
             // added modal for error msg

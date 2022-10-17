@@ -2,7 +2,7 @@
 let gameListDropdownID = $('#game-list-dropdown');
 let routeContentID = $('#route-content');
 
-const historyEl = $("#search-history");
+const historyEl = $("#pokemon-imagesearch-history");
 let history = JSON.parse(localStorage.getItem("wireDexData"));
 
 // declare array for wiredex search history

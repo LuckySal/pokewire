@@ -31,3 +31,19 @@ fetch(gamesAPI)
     
       }
     );
+
+
+//function to update the PKMN avatar with the newest search 
+pkmnAvatar = JSON.parse(localStorage.getItem("wireDexData"));
+newPkmnAvatar = pkmnAvatar.slice(0,1);
+console.log(JSON.stringify(newPkmnAvatar));
+
+const Pokeurl = "https://pokeapi.co/api/v2/pokemon/" + newPkmnAvatar + "/";
+
+fetch(Pokeurl)
+    .then(function (response) {
+      return response.json();
+    })
+    .then (function (response){
+    $("#pkmn-avatar").html("<img src=" + response.sprites.front_default + ">");
+    })

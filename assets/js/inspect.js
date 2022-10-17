@@ -2,6 +2,14 @@
 let gameListDropdownID = $('#game-list-dropdown');
 let routeContentID = $('#route-content');
 
+const imageEl = $("#pokemon-image");
+const nameEl = $("#pokemon-name");
+const numEl = $("#number");
+const typeEl = $("#type");
+const weakEl = $("#weak");
+const strongEl = $("#strong");
+
+
 // get currentPokemon data from loc storage (from main.js) and place in var
 const Pokeurl = "https://pokeapi.co/api/v2/";
 const params = new URLSearchParams(location.search);
@@ -15,6 +23,7 @@ fetch(Pokeurl + "pokemon/" + params.get("name"), { cache: "force-cache", })
         currentPokemonData = data;
         handleGameList();
         handleLocationsList();
+        handleInfoCard();
     });
 
 // Get user's choice of pokemon and display games that pokemon is found in
@@ -83,8 +92,26 @@ const handleLocationsList = () => {
         });
 }
 
-// call functions here:
+function handleInfoCard() {
+    imageEl.attr("src", currentPokemonData.sprites.front_default);
+    nameEl.text(capitalizeFirstLetter(currentPokemonData.name));
+    numEl.text(currentPokemonData.id);
+    typeEl.text(getTypes());
+}
 
+// Helper functions
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function getTypes() {
+    let types = "";
+    types = capitalizeFirstLetter(currentPokemonData.types[0].type.name);
+    if (currentPokemonData.types[1]) {
+        types = types + " " + capitalizeFirstLetter(currentPokemonData.types[1].type.name);
+    }
+    return types;
+}
 
 // event listener for route list modal
 document.addEventListener('DOMContentLoaded', () => {

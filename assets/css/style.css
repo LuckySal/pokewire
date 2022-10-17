@@ -248,7 +248,11 @@ aside {
 /* allows user to scroll instead of content overflowing the page */
 .dropdown-content {
     max-height: 8em;
-    overflow: scroll;
+    overflow: hidden;
+  }
+
+  .dropdown-content:hover {
+    overflow-y: scroll;
   }
 
 .route-list-border {
@@ -268,4 +272,20 @@ aside {
 
 .route-list-border-top {
     border-top: 10px solid var(--pkmn-black);
+}
+
+/* this id is being created dynamically in results js in the gameImg.html */
+#game-img-border {
+    border: 5px solid var(--pkmn-black);
+    border-radius: 1rem;
+    box-shadow: 0 0 10px 5px var(--pkmn-yellow);
+}
+
+#game-overflow {
+    max-height: 24rem;
+    overflow: hidden;
+}
+
+#game-overflow:hover {
+    overflow-y: scroll;
 }

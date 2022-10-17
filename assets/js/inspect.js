@@ -29,11 +29,12 @@ fetch(Pokeurl + "pokemon/" + params.get("name"), { cache: "force-cache", })
         handleGameList();
         handleLocationsList();
         handleInfoCard();
+        handleWireDex();
     });
 
 // Get user's choice of pokemon and display games that pokemon is found in
 const handleGameList = () => {
-    console.log(currentPokemonData);
+    // console.log(currentPokemonData);
 
     $(currentPokemonData.game_indices).each(i => {
         let button = $('<button></button>').text(`${currentPokemonData.game_indices[i].version.name.toUpperCase()}`)
@@ -57,7 +58,7 @@ const handleLocationsList = () => {
             }
         })
         .then(encounterData => {
-            console.log(encounterData);
+            // console.log(encounterData);
             // set to loc storage for now - but will populate modal with live data
             localStorage.setItem('currentPokemonEncounterData', JSON.stringify(encounterData));
 
@@ -70,7 +71,7 @@ const handleLocationsList = () => {
 
                 for (details in versionData[i]) {
 
-                    console.log(versionData[i][details].version.name);
+                    // console.log(versionData[i][details].version.name);
                     let games = versionData[i][details].version.name;
                     let chance = versionData[i][details].max_chance;
 
@@ -88,7 +89,7 @@ const handleLocationsList = () => {
                 }
             });
 
-            console.log(versionData);
+            // console.log(versionData);
 
         })
         .catch(error => {
@@ -102,6 +103,20 @@ function handleInfoCard() {
     nameEl.text(capitalizeFirstLetter(currentPokemonData.name));
     numEl.text(currentPokemonData.id);
     typeEl.text(getTypes());
+}
+
+// declare array for wiredex search history
+let searchHistory = [];
+
+const handleWireDex = () => {
+   searchHistory.unshift(currentPokemonData.name);
+   localStorage.setItem('wireDexData', JSON.stringify(searchHistory));
+}
+
+const wireDexInit = () => {
+    if (localStorage.getItem('wireDexData')) {
+        searchHistory = JSON.parse(localStorage.getItem('wireDexData'));
+}
 }
 
 // Helper functions
@@ -177,3 +192,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+wireDexInit();

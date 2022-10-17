@@ -19,7 +19,7 @@ fetch(gamesAPI)
         gameNameID.append(gameNameHTML);
 
         //Game img
-        gameImageID.html(`<img src="${response.developers[0].image_background}">`);
+        gameImageID.html(`<img id="game-img-border" src="${response.developers[0].image_background}">`);
                    
         //description of game
         let summaryHTML = $(`<p><strong class="pkmn-yellow-text is-size-4">Summary:</strong> <span class="pkmn-white-text">${response.description_raw}</span></p>`);

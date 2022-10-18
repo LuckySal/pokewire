@@ -47,6 +47,10 @@ const handleGameList = () => {
         button.addClass('button dropdown-item dropdown-border pkmn-yellow-background pkmn-black-text is-size-6 mb-2')
 
         gameListDropdownID.append(button);
+
+        $(button).click(function(){
+            location.href = './results.html?game=' + 'pokemon-' + button.text().toLowerCase() + '&name=' + params.get("name");
+        });
     });
 }
 

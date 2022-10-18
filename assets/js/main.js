@@ -25,6 +25,9 @@ function handleSearch(event) {
         console.log("Empty input")
         return;
     }
+    if (formInput.val().trim().toLowerCase() === "missingno") {
+        location.href = "./secret.html";
+    }
     fetch(Pokeurl + `pokemon/${formInput.val().trim().toLowerCase()}`, {
         cache: "reload",
     })

@@ -71,3 +71,7 @@ function handleSearch(event) {
 }
 
 formEl.on("submit", handleSearch);
+
+$( "#pokemon-search-field" ).autocomplete({
+    source: pokeList
+  });

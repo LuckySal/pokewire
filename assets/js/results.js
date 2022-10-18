@@ -18,6 +18,7 @@ const gamesAPI =
     gameName +
     "?key=986d608da5c14059809c05240f4ae2e9&dates=2019-09-01,2019-09-30&platforms=18,1,7";
 
+initHistory();
 fetch(gamesAPI)
     .then(function (response) {
         return response.json();
@@ -118,6 +119,11 @@ fetch(pokeUrl)
             "<img src=" + response.sprites.front_default + ">"
         );
     });
+
+// Helper functions
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
 
 homeEl.on("click", () => {
     location.href = "./index.html";

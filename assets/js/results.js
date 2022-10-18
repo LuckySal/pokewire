@@ -218,7 +218,7 @@ fetch(gamesAPI)
 
             // Buy the game:
             if (response.metacritic_url !== "") {
-                let buyLink = $(`<p class="is-size-5">For reviews on this game and information on where to buy, please visit: <a href="${response.metacritic_url}" class="pkmn-white-text metacritic-border is-size-3 ml-4 px-3 pkmn-blue-background">metacritic</a>`)
+                let buyLink = $(`<p class="is-size-5 mb-5">For reviews on this game and information on where to buy, please visit:</p> <a href="${response.metacritic_url}" class="pkmn-white-text metacritic-border is-size-3 ml-4 px-3 pkmn-blue-background">metacritic</a>`);
                 $("#buy-this-game").append(buyLink);
             }
             else {

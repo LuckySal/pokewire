@@ -4,6 +4,8 @@ const RAWGkey = "key=986d608da5c14059809c05240f4ae2e9"
 const Pokeurl = "https://pokeapi.co/api/v2/"
 
 const formEl = $("#form");
+const inputEl = $("#pokemon-search-field");
+inputEl.focus();
 
 // re-usable functions to open/close modal && See error section for handleSearch to review how each of these are called.
 function openModal($el) {
@@ -28,7 +30,15 @@ function handleSearch(event) {
     if (formInput.val().trim().toLowerCase() === "missingno") {
         location.href = "./secret.html";
     }
-    fetch(Pokeurl + `pokemon/${formInput.val().trim().toLowerCase()}`, {
+    var nameFinal = formInput.val().trim().toLowerCase();
+    if (nameFinal === "nidoran♀" || nameFinal === "nidoran") {
+        nameFinal = "nidoran-f";
+    } else if (nameFinal === "nidoran♂"){
+        nameFinal = "nidoran-m";
+    } else if (nameFinal === "farfetch’d") {
+        nameFinal = "farfetchd";
+    }
+    fetch(Pokeurl + `pokemon/${nameFinal}`, {
         cache: "reload",
     })
         .then(response => {
@@ -41,7 +51,7 @@ function handleSearch(event) {
         })
         .then(data => {
             console.log(data);
-            location.href = './inspect.html?name=' + formInput.val();
+            location.href = './inspect.html?name=' + nameFinal;
         })
         .catch(error => {
             // added modal for error msg
@@ -71,3 +81,7 @@ function handleSearch(event) {
 }
 
 formEl.on("submit", handleSearch);
+
+$( "#pokemon-search-field" ).autocomplete({
+    source: pokeList
+  });

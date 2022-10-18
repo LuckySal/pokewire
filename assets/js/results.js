@@ -3,6 +3,9 @@ let gameImageID = $("#game-img");
 let gameNameID = $("#game-name");
 let gameDetailsID = $("#game-details");
 
+const historyEl = $("#search-history");
+let searchHistory = JSON.parse(localStorage.getItem("wireDexData"));
+
 const homeEl = $("#home");
 // -------------------- //
 const params = new URLSearchParams(location.search);
@@ -10,14 +13,19 @@ const pokeUrl = "https://pokeapi.co/api/v2/pokemon/" + params.get("name") + "/";
 
 // API Data:
 let gameName = params.get("game");
-const gamesAPI = "https://api.rawg.io/api/games/" + gameName + "?key=986d608da5c14059809c05240f4ae2e9&dates=2019-09-01,2019-09-30&platforms=18,1,7";
+const gamesAPI =
+    "https://api.rawg.io/api/games/" +
+    gameName +
+    "?key=986d608da5c14059809c05240f4ae2e9&dates=2019-09-01,2019-09-30&platforms=18,1,7";
+
+initHistory();
 
 fetch(gamesAPI)
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (response) {
-    console.log(response);
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (response) {
+        console.log(response);
 
     if (response.redirect) {
       const newGamesAPI = "https://api.rawg.io/api/games/" + response.slug + "?key=986d608da5c14059809c05240f4ae2e9&dates=2019-09-01,2019-09-30&platforms=18,1,7";
@@ -187,16 +195,40 @@ fetch(gamesAPI)
     }
   });
 
+function initHistory() {
+    if (!searchHistory) return;
+    console.log(searchHistory);
+    for (let i = 0; i < searchHistory.length && i < 4; i++) {
+        let btn = $("<button></button>");
+        btn.attr("type", "submit");
+        btn.attr("style", "display:flex");
+        btn.attr(
+            "class",
+            "search-history-button button pkmn-yellow-background dark-blue-text mb-6"
+        );
+        console.log(searchHistory[i]);
+        let element = searchHistory[i];
+        btn.text(capitalizeFirstLetter(element));
+        historyEl.append(btn);
+    }
+}
+
+
 fetch(pokeUrl)
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (response) {
-    $("#pkmn-avatar").html(
-      "<img src=" + response.sprites.front_default + ">"
-    );
-  });
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (response) {
+        $("#pkmn-avatar").html(
+            "<img src=" + response.sprites.front_default + ">"
+        );
+    });
+
+// Helper functions
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
 
 homeEl.on("click", () => {
-  location.href = "./index.html";
+    location.href = "./index.html";
 });

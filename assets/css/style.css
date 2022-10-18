@@ -128,6 +128,7 @@
     border-radius: 2rem;
     box-shadow: 0 0 4px 4px var(--pkmn-black);
     object-fit: cover;
+    background-color: var(--pkmn-white);
 }
 
 /* This is applied to the entire aside section on both inspect and results.html */
@@ -147,10 +148,13 @@ aside {
 }
 
 #pkmn-avatar {
+    display: flex;
+    justify-content: center;
     border: 3px solid var(--pkmn-red);
     border-radius: 2rem;
     box-shadow: 0 0 30px 3px var(--pkmn-blue);
     object-fit: cover;
+    background-color: var(--pkmn-white);
 }
 
 #pkmn-avatar-container {
@@ -295,4 +299,10 @@ aside {
     background-image: url("../images/pokemon-missingno.jpg");
     background-repeat: repeat;
     background-size: contain;      
+}
+
+.ui-autocomplete {
+    max-height: 100px;
+    overflow-y: auto;
+    overflow-x: hidden;
 }

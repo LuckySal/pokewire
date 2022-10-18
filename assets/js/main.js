@@ -28,7 +28,7 @@ function handleSearch(event) {
     if (formInput.val().trim().toLowerCase() === "missingno") {
         location.href = "./secret.html";
     }
-    var nameFinal = formInput.val().trim().toLowerCase()
+    var nameFinal = formInput.val().trim().toLowerCase();
     if (nameFinal === "nidoran♀" || nameFinal === "nidoran") {
         nameFinal = "nidoran-f";
     } else if (nameFinal === "nidoran♂"){
@@ -49,7 +49,7 @@ function handleSearch(event) {
         })
         .then(data => {
             console.log(data);
-            location.href = './inspect.html?name=' + formInput.val();
+            location.href = './inspect.html?name=' + nameFinal;
         })
         .catch(error => {
             // added modal for error msg

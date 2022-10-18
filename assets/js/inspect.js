@@ -21,6 +21,8 @@ const homeEl = $("#home");
 const Pokeurl = "https://pokeapi.co/api/v2/";
 const params = new URLSearchParams(location.search);
 
+document.title = `PokéWire - ${capitalizeFirstLetter(params.get("name"))}`;
+
 var currentPokemonData;
 fetch(Pokeurl + "pokemon/" + params.get("name"), { cache: "force-cache" })
     .then((result) => {

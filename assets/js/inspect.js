@@ -92,7 +92,11 @@ const handleLocationsList = () => {
             }
         })
         .then((encounterData) => {
-            // console.log(encounterData);
+            console.log(encounterData);
+            if (encounterData.length === 0) {
+                let notFound = `<p class="is-size-6 mb-6"><strong class="pkmn-red-text">Oops!</strong> It looks like this pokemon can't be encountered in the wild!</p>`;
+                routeContentID.append(notFound);
+            }
             // set to loc storage for now - but will populate modal with live data
             localStorage.setItem(
                 "currentPokemonEncounterData",
@@ -134,8 +138,7 @@ const handleLocationsList = () => {
             // console.log(versionData);
         })
         .catch((error) => {
-            // add error modal - should just copy what is already in main.js and index.html
-            console.log(error);
+           console.log(error);
         });
 };
 

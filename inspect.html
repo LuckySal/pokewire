@@ -17,8 +17,10 @@
 <body class="inspect-background">
     <!-- Navbar -->
     <header class="pkmn-blue-background has-text-centered">
-        <button id="home">Go Back</button>
-        <h1 class="title is-1 pkmn-white-text">
+        <nav class="pt-3 mb-3">
+            <button id="home" class="is-size-6 button">Search Again</button>
+        </nav>
+        <h1 class="title is-1 pkmn-white-text poke-wire-title pb-3">
             <iconify-icon inline icon="mdi:pokeball"></iconify-icon>Poké<span class="pkmn-red-text">Wire</span>
         </h1>
     </header>
@@ -73,26 +75,32 @@
             <div id="game-container" class="card pkmn-red-background has-text-centered mb-6">
                 <div class="card-content is-size-4 pkmn-white-text">
                     <!-- Games-->
-                    <p class="is-size-3">Find out what games this pokemon appears in:<div class="dropdown is-hoverable py-3">
+                    <p class="is-size-3">Find out what games this pokemon appears in:
+                    <div class="dropdown is-hoverable py-3">
                         <!-- Dropdown menu so that data isn't overflowing the page | made the dropdown 'is-hoverable'-->
                         <div class="dropdown-trigger">
-                          <button class="dropdown-border button pkmn-blue-background" aria-haspopup="true" aria-controls="dropdown-menu">
-                            <strong class="is-size-4"><span class="pkmn-white-text">Gamé</span><span class="pkmn-red-text">List</span></span></strong>
-                            <span class="icon is-small pkmn-white-text">
-                              <i class="fas fa-angle-down" aria-hidden="true"></i>
-                            </span>
-                          </button>
+                            <button class="dropdown-border button pkmn-blue-background" aria-haspopup="true"
+                                aria-controls="dropdown-menu">
+                                <strong class="is-size-4"><span class="pkmn-white-text">Gamé</span><span
+                                        class="pkmn-red-text">List</span></span></strong>
+                                <span class="icon is-small pkmn-white-text">
+                                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                </span>
+                            </button>
                         </div>
                         <div class="dropdown-menu pkmn-blue-background" role="menu">
-                          <div id="game-list-dropdown" class="dropdown-content pkmn-blue-background">
-                            <!-- dropdown buttons are dynamically created here in inspect.js -->
-                          </div>
+                            <div id="game-list-dropdown" class="dropdown-content pkmn-blue-background">
+                                <!-- dropdown buttons are dynamically created here in inspect.js -->
+                            </div>
                         </div>
-                      </div></p>
+                    </div>
+                    </p>
                     <!--Routes-->
                     <p class="is-size-3">Where can I encounter this pokemon?</p>
                     <!-- trigger for modal -->
-                    <button class="js-modal-trigger button is-size-4 dropdown-border pkmn-blue-background mt-2" data-target="route-list-modal"><strong><span class="pkmn-white-text">Routé</span><span class="pkmn-red-text">List</span></strong></button>
+                    <button class="js-modal-trigger button is-size-4 dropdown-border pkmn-blue-background mt-2"
+                        data-target="route-list-modal"><strong><span class="pkmn-white-text">Routé</span><span
+                                class="pkmn-red-text">List</span></strong></button>
                 </div>
             </div>
         </section>
@@ -118,18 +126,23 @@
     <div id="route-list-modal" class="modal">
         <div class="modal-background"></div>
         <div class="modal-card route-list-border">
-          <header class="modal-card-head pkmn-blue-background route-list-border-bottom">
-            <p class="modal-card-title has-text-centered is-size-3"><strong><span class="pkmn-white-text"><iconify-icon inline icon="mdi:pokeball"></iconify-icon>Routé</span><span class="pkmn-red-text">List</span></strong></p>
-            <button class="delete" aria-label="close"></button>
-          </header>
-          <section id="route-content" class="modal-card-body has-text-centered pkmn-yellow-background">
-            <!-- Content is created dynamically in inspect.js -->
-          </section>
-          <footer class="modal-card-foot pkmn-blue-background route-list-border-top">
-            <p class="is-size-6"><strong class="pkmn-white-text"><iconify-icon inline icon="mdi:pokeball"></iconify-icon>Poké<span class="pkmn-red-text">Wire</span></strong></p>
-          </footer>
+            <header class="modal-card-head pkmn-blue-background route-list-border-bottom">
+                <p class="modal-card-title has-text-centered is-size-3"><strong><span class="pkmn-white-text">
+                            <iconify-icon inline icon="mdi:pokeball"></iconify-icon>Routé
+                        </span><span class="pkmn-red-text">List</span></strong></p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section id="route-content" class="modal-card-body has-text-centered pkmn-yellow-background">
+                <!-- Content is created dynamically in inspect.js -->
+            </section>
+            <footer class="modal-card-foot pkmn-blue-background route-list-border-top">
+                <p class="is-size-6"><strong class="pkmn-white-text">
+                        <iconify-icon inline icon="mdi:pokeball"></iconify-icon>Poké<span
+                            class="pkmn-red-text">Wire</span>
+                    </strong></p>
+            </footer>
         </div>
-      </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"
         integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>

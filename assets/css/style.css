@@ -306,3 +306,8 @@ aside {
     overflow-y: auto;
     overflow-x: hidden;
 }
+
+.metacritic-border {
+    border: 2px solid var(--pkmn-black);
+    border-radius: 1rem;
+}

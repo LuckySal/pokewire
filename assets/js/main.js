@@ -28,7 +28,13 @@ function handleSearch(event) {
     if (formInput.val().trim().toLowerCase() === "missingno") {
         location.href = "./secret.html";
     }
-    fetch(Pokeurl + `pokemon/${formInput.val().trim().toLowerCase()}`, {
+    var nameFinal = formInput.val().trim().toLowerCase()
+    if (nameFinal === "nidoran♀" || nameFinal === "nidoran") {
+        nameFinal = "nidoran-f";
+    } else if (nameFinal === "nidoran♂"){
+        nameFinal = "nidoran-m";
+    }
+    fetch(Pokeurl + `pokemon/${nameFinal}`, {
         cache: "reload",
     })
         .then(response => {

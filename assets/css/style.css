@@ -289,3 +289,10 @@ aside {
 #game-overflow:hover {
     overflow-y: scroll;
 }
+
+/* secret page styling */
+.secret-background {
+    background-image: url("../images/pokemon-missingno.jpg");
+    background-repeat: repeat;
+    background-size: contain;      
+}

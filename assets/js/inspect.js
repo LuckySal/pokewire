@@ -194,7 +194,7 @@ function initHistory() {
         btn.attr("style", "display:flex");
         btn.attr(
             "class",
-            "search-history-button button pkmn-yellow-background dark-blue-text mb-6"
+            "search-history-button button pkmn-yellow-background dark-blue-text mb-6 wireDex-button"
         );
         console.log(history[i]);
         let element = history[i];

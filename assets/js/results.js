@@ -4,6 +4,10 @@ let gameNameID = $("#game-name");
 let gameDetailsID = $("#game-details");
 
 const homeEl = $("#home");
+// -------------------------- //
+const params = new URLSearchParams(location.search);
+const pokeUrl = "https://pokeapi.co/api/v2/pokemon/" + params.get("name") + "/";
+
 
 // API Data:
 let gameName = "pokemon-y";
@@ -55,14 +59,7 @@ fetch(gamesAPI)
         releaseDateHTML.append(developerHTML);
     });
 
-//function to update the PKMN avatar with the newest search
-pkmnAvatar = JSON.parse(localStorage.getItem("wireDexData"));
-newPkmnAvatar = pkmnAvatar.slice(0, 1);
-// console.log(newPkmnAvatar);
-
-const Pokeurl = "https://pokeapi.co/api/v2/pokemon/" + newPkmnAvatar + "/";
-
-fetch(Pokeurl)
+fetch(pokeUrl)
     .then(function (response) {
         return response.json();
     })

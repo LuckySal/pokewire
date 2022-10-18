@@ -33,6 +33,8 @@ function handleSearch(event) {
         nameFinal = "nidoran-f";
     } else if (nameFinal === "nidoran♂"){
         nameFinal = "nidoran-m";
+    } else if (nameFinal === "farfetch’d") {
+        nameFinal = "farfetchd";
     }
     fetch(Pokeurl + `pokemon/${nameFinal}`, {
         cache: "reload",

@@ -25,7 +25,7 @@ fetch(gamesAPI)
     })
     .then(function (response) {
         console.log(response);
-
+       
         //Game name
         let gameNameHTML = $(
             `<h4 class="title is-2 pkmn-yellow-text">${response.name}</h4>`
@@ -42,6 +42,22 @@ fetch(gamesAPI)
             `<p><strong class="pkmn-yellow-text is-size-4">Summary:</strong> <span class="pkmn-white-text">${response.description_raw}</span></p>`
         );
         gameDetailsID.append(summaryHTML);
+
+        //official website & metacritic link
+        if (!response.website) {
+            $("#game-website").text("No official website found");
+        } else {
+        $("#game-website").html("<a href=" + response.website + "> Official Game Webstite </a>");
+        }
+
+        if (!response.metacritic_url) {
+            $("#metacritic").text("No Metacritic found");
+        } else {
+        $("#metacritic").html("<a href=" + response.metacritic_url + "> Metacritic </a>");
+        }
+
+
+
 
         //platform and release date
         if (
@@ -114,11 +130,12 @@ fetch(pokeUrl)
     .then(function (response) {
         return response.json();
     })
-    .then(function (response) {
+    .then(function (response) { 
         $("#pkmn-avatar").html(
             "<img src=" + response.sprites.front_default + ">"
         );
     });
+
 
 // Helper functions
 function capitalizeFirstLetter(string) {

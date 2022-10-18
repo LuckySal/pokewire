@@ -4,6 +4,8 @@ const RAWGkey = "key=986d608da5c14059809c05240f4ae2e9"
 const Pokeurl = "https://pokeapi.co/api/v2/"
 
 const formEl = $("#form");
+const inputEl = $("#pokemon-search-field");
+inputEl.focus();
 
 // re-usable functions to open/close modal && See error section for handleSearch to review how each of these are called.
 function openModal($el) {

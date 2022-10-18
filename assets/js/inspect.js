@@ -2,7 +2,7 @@
 let gameListDropdownID = $("#game-list-dropdown");
 let routeContentID = $("#route-content");
 
-const historyEl = $("#pokemon-imagesearch-history");
+const historyEl = $("#search-history");
 let history = JSON.parse(localStorage.getItem("wireDexData"));
 
 // declare array for wiredex search history
@@ -50,8 +50,13 @@ const handleGameList = () => {
 
         gameListDropdownID.append(button);
 
-        $(button).click(function(){
-            location.href = './results.html?game=' + 'pokemon-' + button.text().toLowerCase() + '&name=' + params.get("name");
+        $(button).click(function () {
+            location.href =
+                "./results.html?game=" +
+                "pokemon-" +
+                button.text().toLowerCase() +
+                "&name=" +
+                params.get("name");
         });
     });
 };

@@ -49,6 +49,10 @@ const handleGameList = () => {
         );
 
         gameListDropdownID.append(button);
+
+        $(button).click(function(){
+            location.href = './results.html?game=' + 'pokemon-' + button.text().toLowerCase() + '&name=' + params.get("name");
+        });
     });
 };
 

@@ -26,6 +26,51 @@ fetch(gamesAPI)
     })
     .then(function (response) {
         console.log(response);
+       
+        //Game name
+        let gameNameHTML = $(
+            `<h4 class="title is-2 pkmn-yellow-text">${response.name}</h4>`
+        );
+        gameNameID.append(gameNameHTML);
+
+        //Game img
+        gameImageID.html(
+            `<img id="game-img-border" src="${response.developers[0].image_background}">`
+        );
+
+        //description of game
+        let summaryHTML = $(
+            `<p><strong class="pkmn-yellow-text is-size-4">Summary:</strong> <span class="pkmn-white-text">${response.description_raw}</span></p>`
+        );
+        gameDetailsID.append(summaryHTML);
+
+        //official website & metacritic link
+        if (!response.website) {
+            $("#game-website").text("No official website found");
+        } else {
+        $("#game-website").html("<a href=" + response.website + "> Official Game Webstite </a>");
+        }
+
+        if (!response.metacritic_url) {
+            $("#metacritic").text("No Metacritic found");
+        } else {
+        $("#metacritic").html("<a href=" + response.metacritic_url + "> Metacritic </a>");
+        }
+
+
+
+
+        //platform and release date
+        if (
+            response.platforms[0] &&
+            response.platforms[1] &&
+            response.platforms[2] &&
+            response.platforms[3] !== undefined
+        ) {
+            let platformHTML = $(
+                `<p><strong class="pkmn-yellow-text is-size-4">Platform: </strong><span class="pkmn-white-text">${response.platforms[0].platform.name} (released: ${response.platforms[0].released_at}), ${response.platforms[1].platform.name} (released: ${response.platforms[1].released_at}), ${response.platforms[2].platform.name} (released: ${response.platforms[2].released_at}), ${response.platforms[3].platform.name} (released: ${response.platforms[3].released_at})</span></p>`
+            );
+            gameDetailsID.append(platformHTML);
 
         if (response.redirect) {
             const newGamesAPI =
@@ -237,11 +282,12 @@ fetch(pokeUrl)
     .then(function (response) {
         return response.json();
     })
-    .then(function (response) {
+    .then(function (response) { 
         $("#pkmn-avatar").html(
             "<img src=" + response.sprites.front_default + ">"
         );
     });
+
 
 function handleHistoryClick(event) {
     if (

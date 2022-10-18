@@ -379,3 +379,15 @@ aside {
 #route-list:active{
     box-shadow: 0 0 25px 8px var(--pkmn-yellow);
 }
+
+.metacritic:hover{
+    color: var(--pkmn-yellow);
+    border: 3px solid var(--pkmn-red);
+    box-shadow: 0 0 12px 4px var(--pkmn-black);
+}
+
+.metacritic:active{
+    color: var(--pkmn-white);
+    border: 3px solid var(--pkmn-black);
+    box-shadow: 0 0 20px 6px var(--pkmn-red);
+}

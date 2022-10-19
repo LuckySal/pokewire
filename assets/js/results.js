@@ -20,6 +20,8 @@ const gamesAPI =
     gameName +
     "?key=986d608da5c14059809c05240f4ae2e9&dates=2019-09-01,2019-09-30&platforms=18,1,7";
 
+document.title = `PokéWire - ${capitalizeFirstLetter(params.get("game"))}`;
+
 initHistory();
 initGameHistory();
 
@@ -275,8 +277,7 @@ fetch(pokeUrl)
 
 function handleHistoryClick(event) {
     if (
-        $(this).is(":button") &&
-        params.get("name") !== $(this).text().toLowerCase()
+        $(this).is(":button")
     ) {
         let newLoc = "./inspect.html?name=" + $(this).text().toLowerCase();
         location.href = newLoc;
@@ -304,3 +305,7 @@ homeEl.on("click", () => {
 
 historyEl.on("click", "button", handleHistoryClick);
 gameDexEl.on("click", "button", handleGameHistoryClick)
+
+
+
+

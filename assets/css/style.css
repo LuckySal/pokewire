@@ -398,3 +398,115 @@ aside {
     border: 3px solid var(--pkmn-black);
     box-shadow: 0 0 20px 6px var(--pkmn-red);
 }
+
+/* Nest Hub */
+@media screen and (max-width: 1024px) {
+.search-card-border {
+    box-shadow: 0 0 120px 10px var(--pkmn-yellow);
+}
+#buy-this-game{
+    justify-content: center;
+}
+/* I didn't want to have to use !important but unfortunately bulma does so now I have to overwrite it for this screen size */
+.metacritic{
+    font-size: 80% !important;
+    margin: 0% !important;
+}
+.wireDex{
+    width: 20rem;
+    margin-left: 2%;
+}
+}
+/* surface pro 7 */
+@media screen and (max-width: 912px) {
+    body {
+        display: flex;
+        flex-flow: column wrap;
+    }
+    aside {
+        float: none;
+        align-items: center;
+    }
+    main {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    #main-container {
+        width: 90vw;
+        padding-left: 0%;
+        margin-left: 5%;
+    }
+    #game-container {
+        max-width: 75%;
+        margin: 0%;
+    }
+    #pokemon-information-container {
+        max-width: 75%;
+    }
+    .wireDex{
+    width: 50vw;
+    }
+    #search-history {
+        display: flex;
+        flex-direction: row wrap !important;
+    }
+
+    #specific-game {
+        margin-bottom: 5%;
+    }
+   
+}
+
+@media screen and (max-width: 768px) {
+    .card-image {
+        width: 50%;
+    }
+    #pokemon-information-card {
+        display: flex;
+        margin-bottom: 12%;
+    }
+    #game-container {
+        margin-bottom: 13% !important;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    aside{
+        width: 80% !important;
+        margin: auto !important;
+    }
+    .wireDex{
+        width: 100%; 
+        margin: auto;
+    }
+    #specific-game {
+        margin: auto !important;
+        margin-bottom: 10% !important;
+    }
+    .secret-border {
+        width: 100%;
+    }
+    .secret-background {
+        margin: 0%;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    #store-front-container {
+        margin: auto;
+        width: 90%;
+    }
+    #pkmn-avatar-container {
+        margin: auto !important;
+        margin-bottom: 12% !important;
+        width: 80%;
+    }
+    .card-image{
+        width: 100%;
+    }
+    #main-container {
+        margin: auto;
+    }
+}

@@ -1,8 +1,7 @@
 
 # Pokéwire
 
-For all your Pokemon whereabouts needs.
-
+For all your Pokemon whereabouts needs and more.
 
 ## About
 
@@ -14,8 +13,12 @@ Where’s that Pokemon?
 
 * We believe this app will be essential for any Pokemon Trainer that has set out on their journey. Whether you're in the Kalos region or all the way in the Unova region, you can find out if the Pokemon you're looking to join your party is located in your game.
 
-## Functionality
+## User Story 
+ 
+ As avid Pokémon Trainers ourselves, we wanted to create an easy way in which we can learn the location and basic information of whatever Pokémon we are currently pursuing to capture and join our party.
 
+## Functionality
+```
 With Pokéwire you can complete a plethora of tasks to aid you in your journey to catch them all including:
 
 * Search for your favorite Pokémon.
@@ -25,13 +28,20 @@ With Pokéwire you can complete a plethora of tasks to aid you in your journey t
 * Recieve information about the game that the Pokémon is located in.
 
 * Learn the locations within the game in which to encounter that Pokémon.
+```
 
-## User Story 
- 
- As avid Pokémon Trainers ourselves, we wanted to create an easy way in which we can learn the location and basic information of whatever Pokémon we are currently pursuing to capture and join our party.
- 
+## Demo of Application
+
+![Demo of Pokewire application](../pokewire/assets/images/Pok%C3%A9WireDemo.gif)
+
+## Links
+
+Deployed Application
+
+Repository Link
+
  ## Technologies
- 
+ ```
  The technologies utilized to make our app Pokéwire work include:
  
 * Bulma Framework
@@ -41,9 +51,10 @@ With Pokéwire you can complete a plethora of tasks to aid you in your journey t
 * Iconify
 
 * And the Third Party APIs - RAWG & PokeAPI
+```
 
 ## Future Development
-
+```
 We hope to further improve our app by:
 
 * Adding more detailed imformation and useful stats to the Pokémon information card.
@@ -51,15 +62,12 @@ We hope to further improve our app by:
 * Add additional avatars to show evolutions and any other forms a Pokémon may have.
 
 * Adding the ability to provide store location in which to buy the games.
-
-//Screenshots Below
-
-
+```
 
 
 ## Roles and Credits
 
-* Project Manager: Brandon Hill
+* Project Manager - Brandon Hill
 
 * Backend Devs - Brandon Hill & Kaileb Hammontree
 

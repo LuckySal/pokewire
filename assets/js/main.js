@@ -33,7 +33,7 @@ function handleSearch(event) {
     var nameFinal = formInput.val().trim().toLowerCase();
     if (nameFinal === "nidoran♀" || nameFinal === "nidoran") {
         nameFinal = "nidoran-f";
-    } else if (nameFinal === "nidoran♂"){
+    } else if (nameFinal === "nidoran♂") {
         nameFinal = "nidoran-m";
     } else if (nameFinal === "farfetch’d") {
         nameFinal = "farfetchd";
@@ -82,6 +82,6 @@ function handleSearch(event) {
 
 formEl.on("submit", handleSearch);
 
-$( "#pokemon-search-field" ).autocomplete({
+$("#pokemon-search-field").autocomplete({
     source: pokeList
-  });
+});

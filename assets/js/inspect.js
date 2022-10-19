@@ -58,16 +58,17 @@ const handleGameList = () => {
                 button.text().toLowerCase() +
                 "&name=" +
                 params.get("name");
-            
-                if (!gameHistory.includes(button.text())) {
-                    gameHistory.unshift(button.text());
-                }
-            
-                if (gameHistory.length > 4) {
-                    gameHistory.pop();
-                }
-            
-                localStorage.setItem("gameDexData", JSON.stringify(gameHistory));
+
+            if (!gameHistory.includes(button.text())) {
+                gameHistory.unshift(button.text());
+            }
+
+            if (gameHistory.length > 4) {
+                gameHistory.pop();
+            }
+
+            localStorage.setItem("gameDexData", JSON.stringify(gameHistory));
+
         });
     });
 };

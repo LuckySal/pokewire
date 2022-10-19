@@ -241,7 +241,7 @@ aside {
     border-radius: 1rem;
 }
 
-.alt-dropdown-border{
+.alt-dropdown-border {
     border: 10px solid var(--pkmn-blue);
     border-radius: 1rem;
 }
@@ -249,15 +249,16 @@ aside {
 .transparent-background {
     background-color: transparent;
 }
+
 /* allows user to scroll instead of content overflowing the page */
 .dropdown-content {
     max-height: 8em;
     overflow: hidden;
-  }
+}
 
-  .dropdown-content:hover {
+.dropdown-content:hover {
     overflow-y: scroll;
-  }
+}
 
 .route-list-border {
     border: 10px solid var(--pkmn-black);
@@ -298,7 +299,7 @@ aside {
 .secret-background {
     background-image: url("../images/pokemon-missingno.jpg");
     background-repeat: repeat;
-    background-size: contain;      
+    background-size: contain;
 }
 
 .ui-autocomplete {
@@ -310,4 +311,22 @@ aside {
 .metacritic-border {
     border: 2px solid var(--pkmn-black);
     border-radius: 1rem;
+}
+
+#home {
+    border: 3px solid var(--pkmn-black);
+    border-radius: 1rem;
+    font-weight: 900;
+    color: var(--pkmn-yellow);
+    background-color: var(--pkmn-red);
+}
+
+#home:hover {
+    color: var(--pkmn-red);
+    background-color: var(--pkmn-yellow);
+    box-shadow: 0 0 10px 5px var(--pkmn-yellow);
+}
+
+#home:active {
+    box-shadow: 0 0 25px 8px var(--pkmn-red);
 }

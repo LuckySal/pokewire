@@ -1,0 +1,400 @@
+/* (Kaileb) added CSS variable to CSS sheet in root */
+:root {
+    --pkmn-yellow: #FFCB05;
+    --pkmn-blue: #2A75BB;
+    --dark-yellow: #C7A008;
+    --dark-blue: #3C5AA6;
+    --pkmn-red: #FB1B1B;
+    --pkmn-black: #000000;
+    --pkmn-white: #FFFFFF;
+}
+
+/* (Kaileb) list of every color in either background or text form to make it easy to apply to backgrounds and texts in html */
+.pkmn-yellow-background {
+    background-color: var(--pkmn-yellow);
+}
+
+.pkmn-blue-background {
+    background-color: var(--pkmn-blue);
+}
+
+.dark-yellow-background {
+    background-color: var(--dark-yellow);
+}
+
+.dark-blue-background {
+    background-color: var(--dark-blue)
+}
+
+.pkmn-red-background {
+    background-color: var(--pkmn-red);
+}
+
+.pkmn-black-background {
+    background-color: var(--pkmn-black);
+}
+
+.pkmn-white-background {
+    background-color: var(--pkmn-white);
+}
+
+.pkmn-yellow-text {
+    color: var(--pkmn-yellow);
+}
+
+.pkmn-blue-text {
+    color: var(--pkmn-blue);
+}
+
+.dark-yellow-text {
+    color: var(--dark-yellow);
+}
+
+.dark-blue-text {
+    color: var(--dark-blue)
+}
+
+.pkmn-red-text {
+    color: var(--pkmn-red);
+}
+
+.pkmn-black-text {
+    color: var(--pkmn-black);
+}
+
+.pkmn-white-text {
+    color: var(--pkmn-white);
+}
+
+.custom-card {
+    border-radius: 1rem;
+}
+
+.gg-pokemon {
+    box-sizing: border-box;
+    position: relative;
+    display: inline;
+    transform: scale(var(--ggs, 1));
+    width: 18px;
+    height: 18px;
+    border: 5px solid transparent;
+    box-shadow:
+        0 0 0 2px,
+        inset 0 0 0 2px;
+    border-radius: 100%
+}
+
+.gg-pokemon::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    border-left: 8px solid;
+    border-right: 8px solid;
+    left: -6px;
+    top: 3px
+}
+
+#main-container {
+    width: 75rem;
+    padding-left: 5rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#game-container {
+    width: 100%;
+    border: 3px solid black;
+    box-shadow: 0 0 65px 40px var(--pkmn-blue);
+    border-radius: 2rem;
+}
+
+#pokemon-information-container {
+    width: 100%;
+}
+
+#pokemon-information-card {
+    width: 100%;
+    border: 3px solid var(--pkmn-black);
+    box-shadow: 0 0 100px 40px var(--pkmn-blue);
+    border-radius: 2rem;
+}
+
+#pokemon-image {
+    border: 3px solid var(--pkmn-red);
+    border-radius: 2rem;
+    box-shadow: 0 0 4px 4px var(--pkmn-black);
+    object-fit: cover;
+    background-color: var(--pkmn-white);
+}
+
+/* for index.html / results.html ONLY */
+#custom-body {
+    height: 120vh;
+}
+
+aside {
+    float: left;
+}
+
+#pkmn-avatar {
+    display: flex;
+    justify-content: center;
+    border: 3px solid var(--pkmn-red);
+    border-radius: 2rem;
+    box-shadow: 0 0 30px 3px var(--pkmn-blue);
+    object-fit: cover;
+    background-color: var(--pkmn-white);
+}
+
+#pkmn-avatar-container {
+    width: 24%;
+}
+
+#specific-game {
+    width: 90%;
+    border: 3px solid var(--pkmn-black);
+    box-shadow: 0 0 65px 20px var(--pkmn-blue);
+    border-radius: 2rem;
+}
+
+.custom-container {
+    margin-right: 1%;
+    margin-left: 1.3%;
+}
+
+#game-icon {
+    border: 3px solid var(--dark-blue);
+    border-radius: 2rem;
+    box-shadow: 0 0 4px 4px var(--pkmn-black);
+    object-fit: cover;
+}
+
+/* note for results.html = currently body height is set to 120vh...when storefront is added, may need to change */
+
+/* placeholder image of gameboy - Photo by Bos Navarit: https://www.pexels.com/photo/close-up-of-a-gameboy-7578735/ */
+
+#store-front-container {
+    text-align: center;
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 4.5%;
+}
+
+#store-front-card {
+    padding: 5%;
+    border: 3px solid var(--pkmn-red);
+    border-radius: 2rem;
+    box-shadow: 0 0 40px 4px var(--pkmn-blue);
+}
+
+.modal-border {
+    padding: 5%;
+    border: 3px solid var(--dark-blue);
+    border-radius: 2rem;
+}
+
+#pokemon-search-field {
+    border: 2px solid var(--pkmn-red);
+}
+
+.search-card-border {
+    border: 3px solid var(--pkmn-black);
+    border-radius: 2rem;
+    box-shadow: 0 0 400px 40px var(--pkmn-yellow);
+}
+
+/* NOTE: images from pexels are free to use and we are not required to give credit, though I typically do in comments/README */
+
+.home-page-background {
+    /* Photo by Erik Mclean: https://www.pexels.com/photo/pokemon-card-in-a-stand-on-a-shelf-9560283/ */
+    background-image: url('../images/HomePageBackground.jpg');
+    background-position: 50% 54%;
+    background-size: cover;
+}
+
+.results-background {
+    /* Photo by Vincent M.A. Janssen: https://www.pexels.com/photo/person-holding-pokemon-ball-toy-1310847/ */
+    background-image: url('../images/resultsBackground.jpg');
+    background-position: 50%;
+    background-size: cover;
+}
+
+.inspect-background {
+    /* Photo by Mike Esparza: https://www.pexels.com/photo/black-nintendo-game-boy-on-black-textile-3702458/ */
+    background-image: url('../images/inspectBackground.jpg');
+    background-size: cover;
+}
+
+.dropdown-border {
+    border: 3px solid var(--pkmn-black);
+    border-radius: 1rem;
+}
+
+.alt-dropdown-border {
+    border: 10px solid var(--pkmn-blue);
+    border-radius: 1rem;
+}
+
+.transparent-background {
+    background-color: transparent;
+}
+
+/* allows user to scroll instead of content overflowing the page */
+.dropdown-content {
+    max-height: 8em;
+    overflow: hidden;
+}
+
+.dropdown-content:hover {
+    overflow-y: scroll;
+}
+
+.route-list-border {
+    border: 10px solid var(--pkmn-black);
+    border-radius: 3rem;
+}
+
+/* for inspect.html */
+.modal-background {
+    background-color: var(--pkmn-red);
+    opacity: .5;
+}
+
+.route-list-border-bottom {
+    border-bottom: 10px solid var(--pkmn-black);
+}
+
+.route-list-border-top {
+    border-top: 10px solid var(--pkmn-black);
+}
+
+/* this id is being created dynamically in results js in the gameImg.html */
+#game-img-border {
+    border: 5px solid var(--pkmn-black);
+    border-radius: 1rem;
+    box-shadow: 0 0 10px 5px var(--pkmn-yellow);
+}
+
+#game-overflow {
+    max-height: 24rem;
+    overflow: hidden;
+}
+
+#game-overflow:hover {
+    overflow-y: scroll;
+}
+
+/* secret page styling */
+.secret-background {
+    background-image: url("../images/pokemon-missingno.jpg");
+    background-repeat: repeat;
+    background-size: contain;
+    height: 78vh;
+}
+
+.secret-border {
+    border: 5px solid var(--pkmn-blue);
+    border-radius: 1rem;
+    box-shadow: 0 0 10px 5px var(--pkmn-red);
+}
+
+.ui-autocomplete {
+    max-height: 100px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.metacritic-border {
+    border: 2px solid var(--pkmn-black);
+    border-radius: 1rem;
+}
+
+#home {
+    border: 3px solid var(--pkmn-black);
+    border-radius: 1rem;
+    font-weight: 900;
+    color: var(--pkmn-yellow);
+    background-color: var(--pkmn-red);
+}
+
+#home:hover {
+    color: var(--pkmn-red);
+    background-color: var(--pkmn-yellow);
+    box-shadow: 0 0 10px 5px var(--pkmn-yellow);
+}
+
+#home:active {
+    box-shadow: 0 0 25px 8px var(--pkmn-red);
+}
+
+.wireDex {
+    width: 25rem;
+    height: auto;
+    text-align: center;
+}
+
+.wireDex-border {
+    border: 3px solid var(--pkmn-white);
+}
+
+.wireDex-button {
+    border: 3px solid var(--pkmn-black);
+    border-radius: 1rem;
+}
+
+.wireDex-button:hover {
+    background-color: var(--pkmn-red);
+    color: var(--pkmn-white);
+    border: 3px solid var(--pkmn-yellow);
+    box-shadow: 0 0 25px 8px var(--pkmn-white);
+}
+
+.wireDex-button:active {
+    box-shadow: 0 0 25px 8px var(--pkmn-red);
+}
+
+.game-button {
+    width: 100%;
+}
+
+
+.game-button:hover{
+    background-color: var(--pkmn-red);
+    color: var(--pkmn-white);
+    border: 3px solid var(--pkmn-yellow);
+    box-shadow: 0 0 12px 4px var(--pkmn-white);
+}
+
+.game-button:active{
+    box-shadow: 0 0 12px 4px var(--pkmn-red);
+}
+
+#game-list:hover{
+    border: 3px solid var(--pkmn-yellow);
+    box-shadow: 0 0 12px 4px var(--pkmn-white);
+}
+
+#route-list:hover{
+    border: 3px solid var(--pkmn-yellow);
+    box-shadow: 0 0 12px 4px var(--pkmn-white);
+}
+
+#route-list:active{
+    box-shadow: 0 0 25px 8px var(--pkmn-yellow);
+}
+
+.metacritic:hover{
+    color: var(--pkmn-yellow);
+    border: 3px solid var(--pkmn-red);
+    box-shadow: 0 0 12px 4px var(--pkmn-black);
+}
+
+.metacritic:active{
+    color: var(--pkmn-white);
+    border: 3px solid var(--pkmn-black);
+    box-shadow: 0 0 20px 6px var(--pkmn-red);
+}

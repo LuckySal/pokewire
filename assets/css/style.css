@@ -293,6 +293,13 @@ aside {
     background-image: url("../images/pokemon-missingno.jpg");
     background-repeat: repeat;
     background-size: contain;
+    height: 78vh;
+}
+
+.secret-border {
+    border: 5px solid var(--pkmn-blue);
+    border-radius: 1rem;
+    box-shadow: 0 0 10px 5px var(--pkmn-red);
 }
 
 .ui-autocomplete {

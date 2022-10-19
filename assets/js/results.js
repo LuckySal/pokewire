@@ -275,8 +275,7 @@ fetch(pokeUrl)
 
 function handleHistoryClick(event) {
     if (
-        $(this).is(":button") &&
-        params.get("name") !== $(this).text().toLowerCase()
+        $(this).is(":button")
     ) {
         let newLoc = "./inspect.html?name=" + $(this).text().toLowerCase();
         location.href = newLoc;

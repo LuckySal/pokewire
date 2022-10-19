@@ -7,6 +7,7 @@ let history = JSON.parse(localStorage.getItem("wireDexData"));
 
 // declare array for wiredex search history
 let searchHistory = [];
+let gameHistory = [];
 
 const imageEl = $("#pokemon-image");
 const nameEl = $("#pokemon-name");
@@ -57,9 +58,25 @@ const handleGameList = () => {
                 button.text().toLowerCase() +
                 "&name=" +
                 params.get("name");
+            
+                if (!gameHistory.includes(button.text())) {
+                    gameHistory.unshift(button.text());
+                }
+            
+                if (gameHistory.length > 4) {
+                    gameHistory.pop();
+                }
+            
+                localStorage.setItem("gameDexData", JSON.stringify(gameHistory));
         });
     });
 };
+
+function gameDexInit() {
+    if (localStorage.getItem("gameDexData")) {
+        gameHistory = JSON.parse(localStorage.getItem("gameDexData"));
+    }
+}
 
 const handleLocationsList = () => {
     // takes the id value from the previous api pull and passes it into this for encounter details
@@ -249,6 +266,7 @@ document.addEventListener("DOMContentLoaded", () => {
 historyEl.on("click", "button", handleHistoryClick);
 
 wireDexInit();
+gameDexInit();
 
 homeEl.on("click", () => {
     location.href = "./index.html";

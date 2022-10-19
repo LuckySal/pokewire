@@ -4,10 +4,12 @@ let gameNameID = $("#game-name");
 let gameDetailsID = $("#game-details");
 
 const historyEl = $("#search-history");
+const gameDexEl = $("#game-history")
 let searchHistory = JSON.parse(localStorage.getItem("wireDexData"));
+let gameHistory = JSON.parse(localStorage.getItem("gameDexData"));
 
 const homeEl = $("#home");
-// -------------------- //
+
 const params = new URLSearchParams(location.search);
 const pokeUrl = "https://pokeapi.co/api/v2/pokemon/" + params.get("name") + "/";
 
@@ -19,6 +21,7 @@ const gamesAPI =
     "?key=986d608da5c14059809c05240f4ae2e9&dates=2019-09-01,2019-09-30&platforms=18,1,7";
 
 initHistory();
+initGameHistory();
 
 fetch(gamesAPI)
     .then(function (response) {
@@ -233,6 +236,24 @@ function initHistory() {
     }
 }
 
+function initGameHistory() {
+    if (!gameHistory) return;
+    console.log(gameHistory);
+    for (let i = 0; i < gameHistory.length && i < 4; i++) {
+        let btn = $("<button></button>");
+        btn.attr("type", "submit");
+        btn.attr("style", "display:flex");
+        btn.attr(
+            "class",
+            "search-history-button button pkmn-yellow-background dark-blue-text mb-6"
+        );
+        console.log(gameHistory[i]);
+        let element = gameHistory[i];
+        btn.text(capitalizeFirstLetter(element));
+        gameDexEl.append(btn);
+    }
+}
+
 fetch(pokeUrl)
     .then(function (response) {
         return response.json();
@@ -253,6 +274,16 @@ function handleHistoryClick(event) {
     }
 }
 
+function handleGameHistoryClick(event) {
+    if (
+        $(this).is(":button") &&
+        params.get("game") !== $(this).text().toLowerCase()
+    ) {
+        let newLoc = "./results.html?game=pokemon-" + $(this).text().toLowerCase() + "&name=" + params.get("name");
+        location.href = newLoc;
+    }
+}
+
 // Helper functions
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -263,3 +294,4 @@ homeEl.on("click", () => {
 });
 
 historyEl.on("click", "button", handleHistoryClick);
+gameDexEl.on("click", "button", handleGameHistoryClick)

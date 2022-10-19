@@ -509,4 +509,38 @@ aside {
     #main-container {
         margin: auto;
     }
+    header {
+        max-width: 100vw;
+    }
+    main {
+        max-width: 100vw; 
+        margin: auto;
+
+    }
+    body {
+        max-width: 100vw;
+        margin: auto;
+
+    }
+    aside {
+        max-width: 100vw;
+        margin: auto;
+    }
+    footer {
+        max-width: 100vw;
+    }
+    .title {
+        font-size: 180% !important;
+    }
+    #pokemon-name {
+        font-size: 150% !important;
+    }
+    #pokemon-information-card{
+        min-width: 300px !important;
+        margin: auto !important;
+    }
+    #pokemon-information-container {
+        min-width: 90vw;
+    }
+
 }

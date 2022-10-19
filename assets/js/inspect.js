@@ -68,6 +68,7 @@ const handleGameList = () => {
             }
 
             localStorage.setItem("gameDexData", JSON.stringify(gameHistory));
+
         });
     });
 };

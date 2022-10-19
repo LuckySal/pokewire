@@ -46,7 +46,7 @@ const handleGameList = () => {
         );
 
         button.addClass(
-            "button dropdown-item dropdown-border pkmn-yellow-background pkmn-black-text is-size-6 mb-2"
+            "button is-flex is-flex-direction-column dropdown-border pkmn-yellow-background pkmn-black-text is-size-6 mb-2 game-button"
         );
 
         gameListDropdownID.append(button);

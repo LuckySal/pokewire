@@ -8,6 +8,7 @@
     <title>PokéWire - Inspect</title>
     <link rel="icon" href="./assets/images/pokeball icon.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
@@ -75,7 +76,7 @@
                     <div class="dropdown is-hoverable py-3">
                         <!-- Dropdown menu so that data isn't overflowing the page | made the dropdown 'is-hoverable'-->
                         <div class="dropdown-trigger">
-                            <button class="dropdown-border button pkmn-blue-background" aria-haspopup="true"
+                            <button id="game-list" class="dropdown-border button pkmn-blue-background" aria-haspopup="true"
                                 aria-controls="dropdown-menu">
                                 <strong class="is-size-4"><span class="pkmn-white-text">Gamé</span><span
                                         class="pkmn-red-text">List</span></span></strong>
@@ -94,7 +95,7 @@
                     <!--Routes-->
                     <p class="is-size-3">Where can I encounter this pokemon?</p>
                     <!-- trigger for modal -->
-                    <button class="js-modal-trigger button is-size-4 dropdown-border pkmn-blue-background mt-2"
+                    <button id="route-list" class="js-modal-trigger button is-size-4 dropdown-border pkmn-blue-background mt-2"
                         data-target="route-list-modal"><strong><span class="pkmn-white-text">Routé</span><span
                                 class="pkmn-red-text">List</span></strong></button>
                 </div>

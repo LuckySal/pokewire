@@ -36,9 +36,9 @@ With Pokéwire you can complete a plethora of tasks to aid you in your journey t
 
 ## Links
 
-Deployed Application
+[Deployed Application](URL)
 
-Repository Link
+[Repository Link](https://github.com/LuckySal/pokewire)
 
  ## Technologies
  ```

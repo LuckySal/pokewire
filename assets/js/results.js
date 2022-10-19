@@ -304,3 +304,7 @@ homeEl.on("click", () => {
 
 historyEl.on("click", "button", handleHistoryClick);
 gameDexEl.on("click", "button", handleGameHistoryClick)
+
+
+
+

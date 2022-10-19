@@ -236,7 +236,7 @@ function initHistory() {
         btn.attr("style", "display:flex");
         btn.attr(
             "class",
-            "search-history-button button pkmn-yellow-background dark-blue-text mb-6"
+            "search-history-button button pkmn-yellow-background dark-blue-text mb-6 wireDex-button"
         );
         console.log(searchHistory[i]);
         let element = searchHistory[i];
@@ -254,7 +254,7 @@ function initGameHistory() {
         btn.attr("style", "display:flex");
         btn.attr(
             "class",
-            "search-history-button button pkmn-yellow-background dark-blue-text mb-6"
+            "search-history-button button pkmn-yellow-background dark-blue-text mb-6 wireDex-button"
         );
         console.log(gameHistory[i]);
         let element = gameHistory[i];

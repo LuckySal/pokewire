@@ -131,13 +131,6 @@
     background-color: var(--pkmn-white);
 }
 
-/* This is applied to the entire aside section on both inspect and results.html */
-#wireDex {
-    width: 25rem;
-    height: auto;
-    text-align: center;
-}
-
 /* for index.html / results.html ONLY */
 #custom-body {
     height: 120vh;
@@ -328,5 +321,31 @@ aside {
 }
 
 #home:active {
+    box-shadow: 0 0 25px 8px var(--pkmn-red);
+}
+
+.wireDex {
+    width: 25rem;
+    height: auto;
+    text-align: center;
+}
+
+.wireDex-border {
+    border: 3px solid var(--pkmn-white);
+}
+
+.wireDex-button {
+    border: 3px solid var(--pkmn-black);
+    border-radius: 1rem;
+}
+
+.wireDex-button:hover {
+    background-color: var(--pkmn-red);
+    color: var(--pkmn-white);
+    border: 3px solid var(--pkmn-yellow);
+    box-shadow: 0 0 25px 8px var(--pkmn-white);
+}
+
+.wireDex-button:active {
     box-shadow: 0 0 25px 8px var(--pkmn-red);
 }

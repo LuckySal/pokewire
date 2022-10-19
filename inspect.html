@@ -22,23 +22,22 @@
         </h1>
     </header>
 
-    <!-- (Kaileb) gave the entire 'main content' section a class of container and wrapped in main tag -->
     <main class="container mx-5 is-flex">
         <!-- WireDex Section -->
-        <aside id="wireDex" class="columns my-6 is-flex-direction-column">
-            <div class="card custom-card column dark-blue-background px-6 mb-3">
+        <aside class="columns my-6 is-flex-direction-column">
+            <div class="wireDex card custom-card column dark-blue-background px-6 mb-3 wireDex-border">
                 <div class="card-content">
                     <h2 class="title is-2 pkmn-white-text">
                         <iconify-icon inline icon="mdi:pokeball"></iconify-icon>Wiré<span
                             class="pkmn-red-text">Dex</span>
                     </h2>
                     <div id="search-history" class="is-flex is-flex-direction-column">
+                        <!-- buttons are dynamically created in inspect.js -->
                     </div>
                 </div>
             </div>
         </aside>
         <!-- Pokemon Avatar Section -->
-        <!-- (Kaileb) removed div tag and refactor to semantic html - removed container class -->
         <section id="main-container" class="is-flex">
             <div id="pokemon-information-container" class="section">
                 <div id="pokemon-information-card" class="card is-horizontal columns pkmn-yellow-background">

@@ -18,7 +18,6 @@ const strongEl = $("#strong");
 
 const homeEl = $("#home");
 
-// get currentPokemon data from loc storage (from main.js) and place in var
 const Pokeurl = "https://pokeapi.co/api/v2/";
 const params = new URLSearchParams(location.search);
 
@@ -40,7 +39,6 @@ fetch(Pokeurl + "pokemon/" + params.get("name"), { cache: "force-cache" })
 
 // Get user's choice of pokemon and display games that pokemon is found in
 const handleGameList = () => {
-    // console.log(currentPokemonData);
 
     $(currentPokemonData.game_indices).each((i) => {
         let button = $("<button></button>").text(
@@ -94,16 +92,10 @@ const handleLocationsList = () => {
             }
         })
         .then((encounterData) => {
-            console.log(encounterData);
             if (encounterData.length === 0) {
                 let notFound = `<p class="is-size-6 mb-6"><strong class="pkmn-red-text">Oops!</strong> It looks like this pokemon can't be encountered in the wild!</p>`;
                 routeContentID.append(notFound);
             }
-            // set to loc storage for now - but will populate modal with live data
-            localStorage.setItem(
-                "currentPokemonEncounterData",
-                JSON.stringify(encounterData)
-            );
 
             // store version_details in empty array - all this has been tested and compared to encounterData.version_details to ensure data is populating correctly...
             let versionData = [];
@@ -112,11 +104,8 @@ const handleLocationsList = () => {
                 versionData.push(encounterData[i].version_details);
 
                 for (details in versionData[i]) {
-                    // console.log(versionData[i][details].version.name);
                     let games = versionData[i][details].version.name;
                     let chance = versionData[i][details].max_chance;
-
-                    // can split('-') with a for loop and use substring to capitalize first letter of each word later on if we have time
 
                     let locationInfo = $(
                         `<h2 class="is-size-4 pkmn-blue-text"><strong class="pkmn-red-text">Location: </strong>${encounterData[
@@ -137,7 +126,6 @@ const handleLocationsList = () => {
                 }
             });
 
-            // console.log(versionData);
         })
         .catch((error) => {
            console.log(error);
@@ -189,7 +177,6 @@ function getTypes() {
 // Initialize the search history
 function initHistory() {
     if (!history) return;
-    console.log(history);
     for (let i = 0; i < history.length; i++) {
         let btn = $("<button></button>");
         btn.attr("type", "submit");
@@ -198,7 +185,6 @@ function initHistory() {
             "class",
             "search-history-button button pkmn-yellow-background dark-blue-text mb-6 wireDex-button"
         );
-        console.log(history[i]);
         let element = history[i];
         btn.text(capitalizeFirstLetter(element));
         historyEl.append(btn);

@@ -1,4 +1,3 @@
-/* (Kaileb) added CSS variable to CSS sheet in root */
 :root {
     --pkmn-yellow: #FFCB05;
     --pkmn-blue: #2A75BB;
@@ -9,7 +8,7 @@
     --pkmn-white: #FFFFFF;
 }
 
-/* (Kaileb) list of every color in either background or text form to make it easy to apply to backgrounds and texts in html */
+/* Classes to make it easier to implement background colors and text colors in HTML*/
 .pkmn-yellow-background {
     background-color: var(--pkmn-yellow);
 }
@@ -173,10 +172,6 @@ aside {
     object-fit: cover;
 }
 
-/* note for results.html = currently body height is set to 120vh...when storefront is added, may need to change */
-
-/* placeholder image of gameboy - Photo by Bos Navarit: https://www.pexels.com/photo/close-up-of-a-gameboy-7578735/ */
-
 #store-front-container {
     text-align: center;
     width: 30%;
@@ -207,7 +202,7 @@ aside {
     box-shadow: 0 0 400px 40px var(--pkmn-yellow);
 }
 
-/* NOTE: images from pexels are free to use and we are not required to give credit, though I typically do in comments/README */
+/* NOTE: images from pexels are free to use  */
 
 .home-page-background {
     /* Photo by Erik Mclean: https://www.pexels.com/photo/pokemon-card-in-a-stand-on-a-shelf-9560283/ */
@@ -243,7 +238,7 @@ aside {
     background-color: transparent;
 }
 
-/* allows user to scroll instead of content overflowing the page */
+/* limit the dropdown menu for game list*/
 .dropdown-content {
     max-height: 8em;
     overflow: hidden;
@@ -272,7 +267,7 @@ aside {
     border-top: 10px solid var(--pkmn-black);
 }
 
-/* this id is being created dynamically in results js in the gameImg.html */
+/* this id is being created dynamically in results.js in the gameImg.html */
 #game-img-border {
     border: 5px solid var(--pkmn-black);
     border-radius: 1rem;
@@ -407,7 +402,7 @@ aside {
 #buy-this-game{
     justify-content: center;
 }
-/* I didn't want to have to use !important but unfortunately bulma does so now I have to overwrite it for this screen size */
+/* Bulma styling uses !important so now I have to override for smaller screens, using !important. Wouldn't normally do this. */
 .metacritic{
     font-size: 80% !important;
     margin: 0% !important;

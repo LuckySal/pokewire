@@ -1,4 +1,3 @@
-// declare any ID's || Elements
 let gameImageID = $("#game-img");
 let gameNameID = $("#game-name");
 let gameDetailsID = $("#game-details");
@@ -30,7 +29,6 @@ fetch(gamesAPI)
         return response.json();
     })
     .then(function (response) {
-        console.log(response);
 
         if (response.redirect) {
             const newGamesAPI =
@@ -231,7 +229,6 @@ fetch(gamesAPI)
 
 function initHistory() {
     if (!searchHistory) return;
-    console.log(searchHistory);
     for (let i = 0; i < searchHistory.length && i < 4; i++) {
         let btn = $("<button></button>");
         btn.attr("type", "submit");
@@ -240,7 +237,6 @@ function initHistory() {
             "class",
             "search-history-button button pkmn-yellow-background dark-blue-text mb-6 wireDex-button"
         );
-        console.log(searchHistory[i]);
         let element = searchHistory[i];
         btn.text(capitalizeFirstLetter(element));
         historyEl.append(btn);
@@ -249,7 +245,6 @@ function initHistory() {
 
 function initGameHistory() {
     if (!gameHistory) return;
-    console.log(gameHistory);
     for (let i = 0; i < gameHistory.length && i < 4; i++) {
         let btn = $("<button></button>");
         btn.attr("type", "submit");
@@ -258,7 +253,6 @@ function initGameHistory() {
             "class",
             "search-history-button button pkmn-yellow-background dark-blue-text mb-6 wireDex-button"
         );
-        console.log(gameHistory[i]);
         let element = gameHistory[i];
         btn.text(capitalizeFirstLetter(element));
         gameDexEl.append(btn);
